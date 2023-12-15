@@ -8,7 +8,7 @@ const Hero = () => {
             <Box
                 borderRadius={5.5}
                 position={"relative"}
-                width={"710px"}
+                maxWidth={"710px"}
                 margin={"0 auto"}
                 overflow={"hidden"}
                 sx={{

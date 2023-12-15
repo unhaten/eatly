@@ -9,23 +9,23 @@ const themeConfig = {
     filter: {
         pizza: {
             color: "#D69900",
-            bgColor: "#FFDE8A",
+            bgColor: "#FFDE8A6E",
         },
         mexican: {
             color: "#FB471D",
-            bgColor: "#EEBBAF",
+            bgColor: "#EEB9AF",
         },
         donut: {
             color: "#E28B14",
-            bgColor: "#EDB66B",
+            bgColor: "#EDB76B44",
         },
         ice: {
             color: "#002073",
-            bgColor: "#5A85FF",
+            bgColor: "#5A86FF56",
         },
         asian: {
             color: "#00732F",
-            bgColor: "#38AD68",
+            bgColor: "#38AD694B",
         },
     },
     badges: {

@@ -10,18 +10,38 @@ declare module "@mui/material/styles" {
 
     // allow configuration using `createTheme`
     interface TypographyVariantsOptions {
-        navHeader?: React.CSSProperties;
-        navLinks?: React.CSSProperties;
-        logoText?: React.CSSProperties;
+        navHeader: React.CSSProperties;
+        navLinks: React.CSSProperties;
+        logoText: React.CSSProperties;
     }
 
     interface Palette {
-        test?: Palette["primary"];
-        // yellow?: Palette["primary"];
+        accent: Palette["primary"];
+        error: Palette["primary"];
+        caption: Palette["primary"];
+        filterPizza: Palette["primary"];
+        filterMexican: Palette["primary"];
+        filterDonut: Palette["primary"];
+        filterIce: Palette["primary"];
+        filterAsian: Palette["primary"];
     }
+
     interface PaletteOptions {
-        test?: PaletteOptions["primary"];
-        // yellow?: PaletteOptions["primary"];
+        accent: PaletteOptions["primary"];
+        caption: PaletteOptions["primary"];
+        filterPizza: PaletteOptions["primary"];
+        filterMexican: PaletteOptions["primary"];
+        filterDonut: PaletteOptions["primary"];
+        filterIce: PaletteOptions["primary"];
+        filterAsian: PaletteOptions["primary"];
+    }
+
+    interface PaletteColorOptions {
+        // accent: PaletteOptions["primary"];
+        // caption: PaletteOptions["primary"];
+        main?: string;
+        color?: string;
+        bgColor?: string;
     }
 }
 
@@ -33,9 +53,9 @@ declare module "@mui/material/Typography" {
         logoText: true;
     }
 
-    interface TypographyPropsColorOverrides {
-        test: true;
-    }
+    // interface TypographyPropsColorOverrides {
+    //     test: true;
+    // }
 }
 
 let theme = createTheme({
@@ -46,13 +66,39 @@ let theme = createTheme({
         // secondary: {
         //     main: themeConfig.palette.secondary,
         // },
-        // background:{},
+        accent: {
+            main: themeConfig.palette.accent,
+        },
+        error: {
+            main: themeConfig.palette.error,
+        },
+        caption: {
+            main: themeConfig.palette.caption,
+        },
+        filterPizza: {
+            color: themeConfig.filter.pizza.color,
+            bgColor: themeConfig.filter.pizza.bgColor,
+        },
+        filterMexican: {
+            color: themeConfig.filter.mexican.color,
+            bgColor: themeConfig.filter.mexican.bgColor,
+        },
+        filterDonut: {
+            color: themeConfig.filter.donut.color,
+            bgColor: themeConfig.filter.donut.bgColor,
+        },
+        filterIce: {
+            color: themeConfig.filter.ice.color,
+            bgColor: themeConfig.filter.ice.bgColor,
+        },
+        filterAsian: {
+            color: themeConfig.filter.asian.color,
+            bgColor: themeConfig.filter.asian.bgColor,
+        },
 
         text: {
             primary: themeConfig.palette.primary,
             secondary: themeConfig.palette.secondary,
-            // !FIXME: uncomment to see an error
-            // test: "#f1f",
         },
     },
     typography: {
@@ -91,6 +137,8 @@ let theme = createTheme({
         },
     },
 });
+
+console.log(theme);
 
 theme = responsiveFontSizes(theme);
 
