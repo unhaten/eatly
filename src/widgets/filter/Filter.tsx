@@ -36,17 +36,23 @@ const Filter = () => {
                     <Box
                         key={index}
                         component={ListItem}
-                        paddingX={2}
-                        paddingY={1}
+                        width={"fit-content"}
+                        padding={0}
                         borderRadius={5}
                         bgcolor={`${item.key}.bgColor`}
-                        width={"fit-content"}
                         sx={{
                             boxShadow:
                                 "0px 19.6px 29.4px rgba(135, 125, 200, 0.25)",
                         }}
                     >
-                        <ListItemButton>
+                        <Box
+                            component={ListItemButton}
+                            display="flex"
+                            justifyContent={"center"}
+                            minWidth={100}
+                            minHeight={50}
+                            borderRadius={5}
+                        >
                             <Typography
                                 variant="body1"
                                 fontWeight={500}
@@ -59,7 +65,7 @@ const Filter = () => {
                                 ml={1}
                                 src={`/img/${item.icon}.svg`}
                             />
-                        </ListItemButton>
+                        </Box>
                     </Box>
                 );
             })}
