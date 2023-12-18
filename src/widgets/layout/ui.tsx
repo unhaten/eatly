@@ -4,7 +4,7 @@ import Header from "../header";
 import Footer from "../footer";
 import { Box, CssBaseline } from "@mui/material";
 import Sidebar from "../sidebar";
-import Container from "../../shared/ui/components";
+import Container from "../../shared/ui/Container";
 
 interface LayoutProps {}
 

@@ -1,36 +1,9 @@
 import { List, ListItem, Typography, Box, ListItemButton } from "@mui/material";
+import options from "./lib/config";
 
 const Filter = () => {
-    const options = [
-        {
-            name: "Pizza",
-            key: "filterPizza",
-            icon: "pizzaIcon",
-        },
-        {
-            name: "Mexican",
-            key: "filterMexican",
-            icon: "mexicanIcon",
-        },
-        {
-            name: "Donut",
-            key: "filterDonut",
-            icon: "donutIcon",
-        },
-        {
-            name: "Ice",
-            key: "filterIce",
-            icon: "iceIcon",
-        },
-        {
-            name: "Asian",
-            key: "filterAsian",
-            icon: "asianIcon",
-        },
-    ];
-
     return (
-        <Box component={List} display="flex" gap={2} mt={9}>
+        <Box component={List} display="flex" gap={2} mt={6}>
             {options.map((item, index) => {
                 return (
                     <Box

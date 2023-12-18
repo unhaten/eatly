@@ -105,6 +105,13 @@ let theme = createTheme({
         // h2: {
         //     fontSize: "1.5rem",
         // },
+        fontFamily: [
+            "Poppins",
+            "Roboto",
+            '"Helvetica Neue"',
+            "Arial",
+            "sans-serif",
+        ].join(","),
         navHeader: {
             color: themeConfig.navHeader.color,
             fontWeight: 600,
@@ -117,6 +124,13 @@ let theme = createTheme({
             fontSize: "0.875rem",
             letterSpacing: "0.0125rem",
             lineHeight: "1.3125rem",
+            fontFamily: [
+                "Manrope",
+                "Roboto",
+                '"Helvetica Neue"',
+                "Arial",
+                "sans-serif",
+            ].join(","),
         },
         logoText: {
             color: themeConfig.logoText.color,

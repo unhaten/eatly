@@ -13,6 +13,11 @@ import {
 } from "@mui/material";
 import { FunctionComponent } from "react";
 import { NavLink, Link } from "react-router-dom";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import ReceiptRoundedIcon from "@mui/icons-material/ReceiptRounded";
+import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
+import WalletRoundedIcon from "@mui/icons-material/WalletRounded";
+import MoveDownRoundedIcon from "@mui/icons-material/MoveDownRounded";
 
 interface SidebarProps {
     mobileOpen: boolean;
@@ -74,11 +79,17 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
                                 <ListItem disablePadding>
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            {index % 2 === 0 ? (
-                                                // <InboxIcon />
-                                                <div>icon</div>
+                                            {index === 0 ? (
+                                                <HomeRoundedIcon />
+                                            ) : index === 1 ? (
+                                                <ReceiptRoundedIcon />
+                                            ) : index === 2 ? (
+                                                <ChatRoundedIcon />
+                                            ) : index === 3 ? (
+                                                <WalletRoundedIcon />
+                                            ) : index === 4 ? (
+                                                <MoveDownRoundedIcon />
                                             ) : (
-                                                // <MailIcon />
                                                 <div>icon</div>
                                             )}
                                         </ListItemIcon>

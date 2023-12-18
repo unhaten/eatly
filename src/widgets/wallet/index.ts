@@ -1,3 +1,3 @@
-import Wallet from "./Wallet";
+import Wallet from "./ui";
 
 export default Wallet;

@@ -1,5 +1,9 @@
 import { AppBar, Toolbar, IconButton, Typography, Box } from "@mui/material";
 import { FunctionComponent } from "react";
+import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 interface HeaderProps {
     handleDrawerToggle(): void;
@@ -38,10 +42,15 @@ const Header: FunctionComponent<HeaderProps> = ({
                     gap={{ xs: 1, sm: 2, md: 3 }}
                 >
                     {/* //!  TODO: probably this is going to be at shared */}
-                    <p>search</p>
-                    <p>notifications</p>
-                    <p>account</p>
-                    <p>menu</p>
+                    <p>
+                        <SearchRoundedIcon />
+                    </p>
+                    <p>
+                        <NotificationsRoundedIcon />
+                    </p>
+                    <p>
+                        <AccountCircleRoundedIcon />
+                    </p>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -50,7 +59,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                         sx={{ ml: 2, display: { sm: "none" } }}
                     >
                         {/* <MenuIcon /> */}
-                        <div>icon</div>
+                        <MenuRoundedIcon />
                     </IconButton>
                 </Box>
             </Box>
