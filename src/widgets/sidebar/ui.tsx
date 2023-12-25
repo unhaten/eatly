@@ -6,7 +6,7 @@ import {
     ListItem,
     ListItemButton,
     ListItemIcon,
-    ListItemText,
+    // ListItemText,
     Typography,
     useMediaQuery,
     useTheme,
@@ -18,21 +18,20 @@ import ReceiptRoundedIcon from "@mui/icons-material/ReceiptRounded";
 import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
 import WalletRoundedIcon from "@mui/icons-material/WalletRounded";
 import MoveDownRoundedIcon from "@mui/icons-material/MoveDownRounded";
+import drawerWidth from "../../shared/consts";
 
 interface SidebarProps {
     mobileOpen: boolean;
     handleDrawerToggle(): void;
-    drawerWidth: number;
 }
 
 const Sidebar: FunctionComponent<SidebarProps> = ({
     mobileOpen,
     handleDrawerToggle,
-    drawerWidth,
 }) => {
     const theme = useTheme();
 
-    const isSm = useMediaQuery(theme.breakpoints.up("sm"), {
+    const isMd = useMediaQuery(theme.breakpoints.up("md"), {
         defaultMatches: true,
     });
 
@@ -148,11 +147,11 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
     return (
         <Box
             component="aside"
-            sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+            sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}
             aria-label="mailbox folders"
         >
             {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-            {!isSm ? (
+            {!isMd ? (
                 <Drawer
                     // container={container}
                     variant="temporary"

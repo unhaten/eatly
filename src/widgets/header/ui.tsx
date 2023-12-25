@@ -4,22 +4,19 @@ import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import drawerWidth from "../../shared/consts";
 
 interface HeaderProps {
     handleDrawerToggle(): void;
-    drawerWidth: number;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({
-    handleDrawerToggle,
-    drawerWidth,
-}) => {
+const Header: FunctionComponent<HeaderProps> = ({ handleDrawerToggle }) => {
     return (
         <AppBar
             position="fixed"
             sx={{
-                width: { sm: `calc(100% - ${drawerWidth}px)` },
-                ml: { sm: `${drawerWidth}px` },
+                width: { md: `calc(100% - ${drawerWidth}px)` },
+                ml: { md: `${drawerWidth}px` },
                 p: "15px 0",
                 backgroundColor: "#fff",
                 color: "#111",
@@ -56,7 +53,7 @@ const Header: FunctionComponent<HeaderProps> = ({
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ ml: 2, display: { sm: "none" } }}
+                        sx={{ ml: 2, display: { md: "none" } }}
                     >
                         {/* <MenuIcon /> */}
                         <MenuRoundedIcon />

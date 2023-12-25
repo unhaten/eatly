@@ -1,7 +1,7 @@
 import { Typography, Box } from "@mui/material";
-import NearbyProductList from "../../../../entities/product/components/nearbyProductList";
+import PopularProductList from "../../../../entities/product/components/popularProductList";
 
-const Nearby = () => {
+const Popular = () => {
     return (
         <section>
             <Box
@@ -12,13 +12,13 @@ const Nearby = () => {
                 alignItems="center"
             >
                 <Typography variant="h5" component="h2">
-                    Nearby Restaurants
+                    Most Popular
                 </Typography>
                 <Typography>View all</Typography>
             </Box>
-            <NearbyProductList />
+            <PopularProductList />
         </section>
     );
 };
 
-export default Nearby;
+export default Popular;
