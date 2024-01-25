@@ -1,8 +1,9 @@
-import { Typography, Box } from '@mui/material'
+import { Box } from '@mui/material'
 import s from './style.module.scss'
 import { FC } from 'react'
 import { RestaurantProps } from './types/types'
 import CardInfo from '../../shared/ui/CardInfo'
+import AddFavorites from '../../features/addFavorites'
 
 const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 	return (
@@ -23,8 +24,21 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 				src={nearby ? '/img/placeholderNearby.jpg' : ''}
 				alt='productImage'
 			/>
-			<CardInfo item={restaurant} />
-			{nearby && <Box>fav</Box>}
+			<Box
+				className={s.content}
+				display='flex'
+				justifyContent='space-between'
+				alignItems={'end'}
+				sx={{
+					paddingX: 3,
+					paddingY: 1
+				}}
+			>
+				<Box>
+					<CardInfo item={restaurant} />
+				</Box>
+				{nearby && <AddFavorites />}
+			</Box>
 		</Box>
 	)
 }

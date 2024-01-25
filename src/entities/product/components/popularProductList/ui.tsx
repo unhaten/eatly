@@ -9,6 +9,7 @@ const PopularProductList = () => {
 		<Box
 			component={List}
 			display={'flex'}
+			gap={2}
 			sx={{
 				'& li': {
 					// flexBasis: "31%",

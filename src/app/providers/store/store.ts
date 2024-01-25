@@ -1,10 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { productAPI } from '../../../entities/product/model/services/product.service'
 import { restaurantAPI } from '../../../entities/restaurant/model/services/restaurant.service'
+import { userAPI } from '../../../entities/user/model/services/user.service'
 
 const rootReducer = combineReducers({
 	[productAPI.reducerPath]: productAPI.reducer,
-	[restaurantAPI.reducerPath]: restaurantAPI.reducer
+	[restaurantAPI.reducerPath]: restaurantAPI.reducer,
+	[userAPI.reducerPath]: userAPI.reducer
 })
 
 export const setupStore = () => {
@@ -13,7 +15,8 @@ export const setupStore = () => {
 		middleware: getDefaultMiddleware =>
 			getDefaultMiddleware().concat([
 				productAPI.middleware,
-				restaurantAPI.middleware
+				restaurantAPI.middleware,
+				userAPI.middleware
 			])
 	})
 }

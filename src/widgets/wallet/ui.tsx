@@ -1,5 +1,7 @@
 import { Typography, Box } from '@mui/material'
 import s from './Wallet.module.scss'
+import CreditCard from '../../entities/creditCard'
+import CreditCardOptions from '../creditCardOptions'
 
 const Wallet = () => {
 	return (
@@ -20,7 +22,10 @@ const Wallet = () => {
 				>
 					Wallet
 				</Box>
-				<Box marginTop={3}>card</Box>
+				<Box marginTop={3}>
+					<CreditCard />
+					<CreditCardOptions />
+				</Box>
 			</Box>
 		</section>
 	)
