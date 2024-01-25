@@ -1,12 +1,23 @@
-import { configureStore } from "@reduxjs/toolkit";
-import favoritesReducer from "../../../features/favorites.slice";
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import { productAPI } from '../../../entities/product/model/services/product.service'
+import { restaurantAPI } from '../../../entities/restaurant/model/services/restaurant.service'
 
-export const store = configureStore({
-    reducer: {
-        favorites: favoritesReducer,
-    },
-});
+const rootReducer = combineReducers({
+	[productAPI.reducerPath]: productAPI.reducer,
+	[restaurantAPI.reducerPath]: restaurantAPI.reducer
+})
 
-export type RootState = ReturnType<typeof store.getState>;
+export const setupStore = () => {
+	return configureStore({
+		reducer: rootReducer,
+		middleware: getDefaultMiddleware =>
+			getDefaultMiddleware().concat([
+				productAPI.middleware,
+				restaurantAPI.middleware
+			])
+	})
+}
 
-export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof rootReducer>
+export type AppStore = ReturnType<typeof setupStore>
+export type AppDispatch = AppStore['dispatch']

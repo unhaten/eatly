@@ -1,0 +1,69 @@
+{
+	"product": [
+		{
+			"id": "1",
+			"name": "Chicken",
+			"price": 12.99,
+			"type": "healthy",
+			"deliveryTime": 24,
+			"rate": 4.8,
+			"imageWide": "",
+			"imageThin": "",
+			"visits": 0
+		},
+		{
+			"id": "2",
+			"name": "Burger",
+			"price": 5.99,
+			"type": "trending",
+			"deliveryTime": 32,
+			"rate": 4.2,
+			"imageWide": "",
+			"imageThin": "",
+			"visits": 0
+		},
+		{
+			"id": "3",
+			"name": "Sushi",
+			"price": 7.99,
+			"type": "supreme",
+			"deliveryTime": 12,
+			"rate": 4.9,
+			"imageWide": "",
+			"imageThin": "",
+			"visits": 0
+		}
+	],
+	"restaurant": [
+		{
+			"id": "1",
+			"name": "The Chicken King",
+			"type": "healthy",
+			"deliveryTime": 24,
+			"rate": 4.8,
+			"imageWide": "",
+			"imageThin": "",
+			"visits": 0
+		},
+		{
+			"id": "2",
+			"name": "Burger Prep",
+			"type": "trending",
+			"deliveryTime": 32,
+			"rate": 4.2,
+			"imageWide": "",
+			"imageThin": "",
+			"visits": 0
+		},
+		{
+			"id": "3",
+			"name": "Chicken Hell",
+			"type": "supreme",
+			"deliveryTime": 12,
+			"rate": 4.9,
+			"imageWide": "",
+			"imageThin": "",
+			"visits": 0
+		}
+	]
+}

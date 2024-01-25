@@ -1,3 +1,9 @@
+export enum AppRoutes {
+    HOME = "home",
+    
+}
+
+
 export const paths = {
     home: "/",
     register: "/register",

@@ -1,7 +1,6 @@
-export interface IProduct {
+export interface IRestaurant {
 	id: string
 	name: string
-	price: number
 	type: string
 	deliveryTime: number
 	rate: number
@@ -10,7 +9,7 @@ export interface IProduct {
 	visits: number
 }
 
-export interface ProductProps {
-	popular?: boolean
-	product: IProduct
+export interface RestaurantProps {
+	nearby?: boolean
+	restaurant: IRestaurant
 }
