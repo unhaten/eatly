@@ -18,10 +18,7 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 				}
 			}}
 		>
-			<img
-				src={popular ? '/img/foodPopular.png' : ''}
-				alt='productImage'
-			/>
+			<img src={popular ? product.image : ''} alt='productImage' />
 			<Box
 				sx={{
 					paddingX: 3,

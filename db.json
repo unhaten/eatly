@@ -7,7 +7,7 @@
 			"type": "healthy",
 			"deliveryTime": 24,
 			"rate": 4.8,
-			"imageWide": "",
+			"image": "./src/shared/assets/img/food1.png",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -18,7 +18,7 @@
 			"type": "trending",
 			"deliveryTime": 32,
 			"rate": 4.2,
-			"imageWide": "",
+			"image": "./src/shared/assets/img/food2.png",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -29,7 +29,51 @@
 			"type": "supreme",
 			"deliveryTime": 12,
 			"rate": 4.9,
-			"imageWide": "",
+			"image": "./src/shared/assets/img/food3.png",
+			"imageThin": "",
+			"visits": 0
+		},
+		{
+			"id": "4",
+			"name": "Blank",
+			"price": 7.99,
+			"type": "supreme",
+			"deliveryTime": 12,
+			"rate": 4.9,
+			"image": "./public/img/foodPopular.png",
+			"imageThin": "",
+			"visits": 0
+		},
+		{
+			"id": "5",
+			"name": "Seb",
+			"price": 7.99,
+			"type": "supreme",
+			"deliveryTime": 12,
+			"rate": 4.9,
+			"image": "./src/shared/assets/img/food4.png",
+			"imageThin": "",
+			"visits": 0
+		},
+		{
+			"id": "6",
+			"name": "Sushi",
+			"price": 7.99,
+			"type": "supreme",
+			"deliveryTime": 12,
+			"rate": 4.9,
+			"image": "./src/shared/assets/img/food5.png",
+			"imageThin": "",
+			"visits": 0
+		},
+		{
+			"id": "7",
+			"name": "Sushi",
+			"price": 7.99,
+			"type": "supreme",
+			"deliveryTime": 12,
+			"rate": 4.9,
+			"image": "./src/shared/assets/img/food6.png",
 			"imageThin": "",
 			"visits": 0
 		}
@@ -41,7 +85,7 @@
 			"type": "healthy",
 			"deliveryTime": 24,
 			"rate": 4.8,
-			"imageWide": "",
+			"image": "./src/shared/assets/img/restaurant1.jpg",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -51,7 +95,7 @@
 			"type": "trending",
 			"deliveryTime": 32,
 			"rate": 4.2,
-			"imageWide": "",
+			"image": "./src/shared/assets/img/restaurant2.jpg",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -61,7 +105,7 @@
 			"type": "supreme",
 			"deliveryTime": 12,
 			"rate": 4.9,
-			"imageWide": "",
+			"image": "./src/shared/assets/img/restaurant3.jpg",
 			"imageThin": "",
 			"visits": 0
 		}

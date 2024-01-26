@@ -4,7 +4,8 @@ import { IRestaurant } from '../../types/types'
 import Restaurant from '../..'
 
 const NearbyRestaurantList = () => {
-	const { data, isLoading } = restaurantAPI.useFetchAllRestaurantsQuery('')
+	const { data, isLoading, error } =
+		restaurantAPI.useFetchAllRestaurantsQuery('')
 	return (
 		<Box
 			component={List}
@@ -26,6 +27,8 @@ const NearbyRestaurantList = () => {
 		>
 			{/* //! TODO: make service/slice that grabs 3 items from db and map it here */}
 			{isLoading && <h1>Loading...</h1>}
+			{error && <h1>Error has occurred</h1>}
+
 			{data &&
 				data.map((restaurant: IRestaurant) => {
 					return (

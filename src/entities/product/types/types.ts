@@ -5,7 +5,7 @@ export interface IProduct {
 	type: string
 	deliveryTime: number
 	rate: number
-	imageWide: string
+	image: string
 	imageThin: string
 	visits: number
 }

@@ -15,15 +15,13 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 					display: 'block',
 					margin: '0 auto',
 					width: '100%',
+					maxHeight: '200px',
 					borderTopLeftRadius: 20,
 					borderTopRightRadius: 20
 				}
 			}}
 		>
-			<img
-				src={nearby ? '/img/placeholderNearby.jpg' : ''}
-				alt='productImage'
-			/>
+			<img src={nearby ? restaurant.image : ''} alt='productImage' />
 			<Box
 				className={s.content}
 				display='flex'

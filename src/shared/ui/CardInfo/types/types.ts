@@ -4,7 +4,7 @@ export interface IInfo {
 	type: string
 	deliveryTime: number
 	rate: number
-	imageWide: string
+	image: string
 	imageThin: string
 	visits: number
 }
