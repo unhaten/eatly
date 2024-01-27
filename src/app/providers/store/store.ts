@@ -2,8 +2,10 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { productAPI } from '../../../entities/product/model/services/product.service'
 import { restaurantAPI } from '../../../entities/restaurant/model/services/restaurant.service'
 import { userAPI } from '../../../entities/user/model/services/user.service'
+import productReducer from '../../../entities/product/model/reducers/product.slice'
 
 const rootReducer = combineReducers({
+	productReducer,
 	[productAPI.reducerPath]: productAPI.reducer,
 	[restaurantAPI.reducerPath]: restaurantAPI.reducer,
 	[userAPI.reducerPath]: userAPI.reducer

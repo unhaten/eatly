@@ -60,7 +60,7 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 							.{formattedCurrency[1]}
 						</span>
 					</Typography>
-					<AddToCart />
+					<AddToCart product={product}/>
 				</Box>
 			</Box>
 			{popular && <AddFavorites product />}
