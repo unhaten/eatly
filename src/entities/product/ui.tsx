@@ -2,11 +2,13 @@ import { Box } from '@mui/material'
 import { ProductProps } from './types/types'
 import { FC } from 'react'
 import CardInfo from '../../shared/ui/CardInfo'
+import AddFavorites from '../../features/addFavorites'
 
 const Product: FC<ProductProps> = ({ popular, product }) => {
 	return (
 		<Box
 			width={'100%'}
+			py={2}
 			// borderRadius={5}
 			sx={{
 				'& img': {
@@ -18,7 +20,11 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 				}
 			}}
 		>
-			<img src={popular ? product.image : ''} alt='productImage' />
+			<img
+				src={popular ? product.image : ''}
+				alt='productImage'
+				loading='lazy'
+			/>
 			<Box
 				sx={{
 					paddingX: 3,
@@ -27,6 +33,7 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 			>
 				<CardInfo item={product} />
 			</Box>
+			{popular && <AddFavorites product />}
 		</Box>
 	)
 }

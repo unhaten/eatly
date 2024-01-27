@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import s from './style.module.scss'
 import { FC } from 'react'
 import { InfoProps } from './types/types'
+import StarRateRoundedIcon from '@mui/icons-material/StarRateRounded'
 
 const CardInfo: FC<InfoProps> = ({ item }) => {
 	return (
@@ -37,10 +38,10 @@ const CardInfo: FC<InfoProps> = ({ item }) => {
 			</Typography>
 			<Box className={s.info}>
 				<Typography className={s.time}>
-					{item.deliveryTime}min
+					{item.deliveryTime}min •
 				</Typography>
 				<Box className={s.dot} />
-				<Box className={s.star} />
+				<StarRateRoundedIcon fontSize='small' className={s.star} />
 				<Typography className={s.rate}>{item.rate}</Typography>
 			</Box>
 		</>

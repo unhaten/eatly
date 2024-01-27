@@ -21,7 +21,11 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 				}
 			}}
 		>
-			<img src={nearby ? restaurant.image : ''} alt='productImage' />
+			<img
+				src={nearby ? restaurant.image : ''}
+				alt='productImage'
+				loading='lazy'
+			/>
 			<Box
 				className={s.content}
 				display='flex'
@@ -35,7 +39,7 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 				<Box>
 					<CardInfo item={restaurant} />
 				</Box>
-				{nearby && <AddFavorites />}
+				{nearby && <AddFavorites restaurant />}
 			</Box>
 		</Box>
 	)

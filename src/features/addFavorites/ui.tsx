@@ -1,15 +1,24 @@
 import { IconButton } from '@mui/material'
-import BookmarkIcon from '@mui/icons-material/Bookmark'
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
-import FavoriteIcon from '@mui/icons-material/Favorite'
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder'
-import StarIcon from '@mui/icons-material/Star'
+import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded'
+import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded'
+import BookmarkBorderRoundedIcon from '@mui/icons-material/BookmarkBorderRounded'
+import BookmarkRoundedIcon from '@mui/icons-material/BookmarkRounded'
+import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded'
 
-const AddFavorites = () => {
+import { FC } from 'react'
+import s from './style.module.scss'
+
+interface IAddFavorites {
+	restaurant?: boolean
+	product?: boolean
+}
+
+const AddFavorites: FC<IAddFavorites> = ({ restaurant, product }) => {
 	return (
 		<>
-			<IconButton>
-				<BookmarkIcon />
+			<IconButton className={product ? s.absolute : ''}>
+				{restaurant && <BookmarkRoundedIcon />}
+				{product && <FavoriteBorderRoundedIcon fontSize='small' />}
 			</IconButton>
 		</>
 	)
