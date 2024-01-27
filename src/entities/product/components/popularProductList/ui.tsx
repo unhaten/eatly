@@ -11,10 +11,12 @@ const PopularProductList = () => {
 			display={'flex'}
 			gap={2}
 			sx={{
+				overflowX: 'scroll',
+
 				'& li': {
 					// flexBasis: "31%",
 					width: 'fit-content',
-					borderRadius: 4,
+					borderRadius: 5,
 					padding: 0,
 					border: '1px solid #F4F4F6',
 					boxShadow:

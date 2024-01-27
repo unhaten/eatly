@@ -33,16 +33,31 @@ const CardInfo: FC<InfoProps> = ({ item }) => {
 					{item.type}
 				</Typography>
 			</Box>
-			<Typography fontWeight={600} variant='body1' className={s.name}>
+			<Typography
+				fontWeight={600}
+				variant='body1'
+				className={s.name}
+				mt={0.5}
+			>
 				{item.name}
 			</Typography>
 			<Box className={s.info}>
-				<Typography className={s.time}>
+				<Typography variant='caption' mt={'2px'} className={s.time}>
 					{item.deliveryTime}min •
 				</Typography>
-				<Box className={s.dot} />
-				<StarRateRoundedIcon fontSize='small' className={s.star} />
-				<Typography className={s.rate}>{item.rate}</Typography>
+				<Box display='flex' alignItems='end'>
+					<StarRateRoundedIcon
+						fontSize='small'
+						className={s.star}
+						sx={{
+							color: 'accent.main',
+							marginBottom: '2px'
+						}}
+					/>
+					<Typography variant='caption' className={s.rate}>
+						{item.rate}
+					</Typography>
+				</Box>
 			</Box>
 		</>
 	)

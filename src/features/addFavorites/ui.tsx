@@ -3,7 +3,6 @@ import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded'
 import BookmarkBorderRoundedIcon from '@mui/icons-material/BookmarkBorderRounded'
 import BookmarkRoundedIcon from '@mui/icons-material/BookmarkRounded'
-import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded'
 
 import { FC } from 'react'
 import s from './style.module.scss'

@@ -2,7 +2,7 @@
 	"product": [
 		{
 			"id": "1",
-			"name": "Chicken",
+			"name": "Cabbages",
 			"price": 12.99,
 			"type": "healthy",
 			"deliveryTime": 24,
@@ -13,7 +13,7 @@
 		},
 		{
 			"id": "2",
-			"name": "Burger",
+			"name": "Super Salad",
 			"price": 5.99,
 			"type": "trending",
 			"deliveryTime": 32,
@@ -24,7 +24,7 @@
 		},
 		{
 			"id": "3",
-			"name": "Sushi",
+			"name": "Greek Salad",
 			"price": 7.99,
 			"type": "supreme",
 			"deliveryTime": 12,
@@ -35,9 +35,9 @@
 		},
 		{
 			"id": "4",
-			"name": "Blank",
+			"name": "Chicken",
 			"price": 7.99,
-			"type": "supreme",
+			"type": "healthy",
 			"deliveryTime": 12,
 			"rate": 4.9,
 			"image": "./public/img/foodPopular.png",
@@ -46,7 +46,7 @@
 		},
 		{
 			"id": "5",
-			"name": "Seb",
+			"name": "Thyme",
 			"price": 7.99,
 			"type": "supreme",
 			"deliveryTime": 12,
@@ -57,9 +57,9 @@
 		},
 		{
 			"id": "6",
-			"name": "Sushi",
+			"name": "Icy Dessert",
 			"price": 7.99,
-			"type": "supreme",
+			"type": "trending",
 			"deliveryTime": 12,
 			"rate": 4.9,
 			"image": "./src/shared/assets/img/food5.png",
@@ -68,9 +68,9 @@
 		},
 		{
 			"id": "7",
-			"name": "Sushi",
+			"name": "Kukri",
 			"price": 7.99,
-			"type": "supreme",
+			"type": "healthy",
 			"deliveryTime": 12,
 			"rate": 4.9,
 			"image": "./src/shared/assets/img/food6.png",
@@ -81,7 +81,7 @@
 	"restaurant": [
 		{
 			"id": "1",
-			"name": "The Chicken King",
+			"name": "French Dream",
 			"type": "healthy",
 			"deliveryTime": 24,
 			"rate": 4.8,
@@ -91,7 +91,7 @@
 		},
 		{
 			"id": "2",
-			"name": "Burger Prep",
+			"name": "Burger House",
 			"type": "trending",
 			"deliveryTime": 32,
 			"rate": 4.2,
@@ -101,7 +101,7 @@
 		},
 		{
 			"id": "3",
-			"name": "Chicken Hell",
+			"name": "Exposition",
 			"type": "supreme",
 			"deliveryTime": 12,
 			"rate": 4.9,
