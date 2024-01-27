@@ -1,6 +1,9 @@
-import { Box, IconButton } from '@mui/material'
+import { IconButton } from '@mui/material'
 import { useAppSelector } from '../../shared/lib/hooks/redux'
 import OrderList from '../../features/orderList'
+import ApplyCoupon from '../../features/applyCoupon'
+import OrderCount from '../../features/orderCount'
+import PlaceOrder from '../../features/placeOrder'
 
 const OrdersPage = () => {
 	const { products } = useAppSelector(state => state.productReducer)
@@ -19,7 +22,12 @@ const OrdersPage = () => {
 				>
 					{'<'}
 				</IconButton>
-				<OrderList products={products} />
+				<form>
+					<OrderList products={products} />
+					<ApplyCoupon />
+					<OrderCount />
+					<PlaceOrder />
+				</form>
 			</section>
 		</>
 	)
