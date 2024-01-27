@@ -2,7 +2,7 @@ import { Box } from '@mui/material'
 import { ProductProps } from './types/types'
 import { FC } from 'react'
 import CardInfo from '../../shared/ui/CardInfo'
-import AddFavorites from '../../features/addFavorites'
+import AddToFavorites from '../../features/addToFavorites'
 import AddToCart from '../../features/addToCart'
 import FormattedPrice from '../../features/formattedPrice'
 
@@ -41,11 +41,10 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 					justifyContent={'space-between'}
 				>
 					<FormattedPrice price={product.price} inCard />
-
 					<AddToCart product={product} />
 				</Box>
 			</Box>
-			{popular && <AddFavorites product />}
+			{popular && <AddToFavorites item={product} product />}
 		</Box>
 	)
 }

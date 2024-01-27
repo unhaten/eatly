@@ -3,7 +3,7 @@ import s from './style.module.scss'
 import { FC } from 'react'
 import { RestaurantProps } from './types/types'
 import CardInfo from '../../shared/ui/CardInfo'
-import AddFavorites from '../../features/addFavorites'
+import AddToBookmarks from '../../features/addToBookmarks'
 
 const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 	return (
@@ -39,7 +39,7 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 				<Box>
 					<CardInfo item={restaurant} />
 				</Box>
-				{nearby && <AddFavorites restaurant />}
+				{nearby && <AddToBookmarks item={restaurant} restaurant />}
 			</Box>
 		</Box>
 	)
