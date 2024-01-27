@@ -16,7 +16,13 @@ const AddFavorites: FC<IAddFavorites> = ({ restaurant, product }) => {
 	return (
 		<>
 			<IconButton className={product ? s.absolute : ''}>
-				{restaurant && <BookmarkRoundedIcon />}
+				{restaurant && (
+					<BookmarkBorderRoundedIcon
+						sx={{
+							color: 'accent.main'
+						}}
+					/>
+				)}
 				{product && <FavoriteBorderRoundedIcon fontSize='small' />}
 			</IconButton>
 		</>

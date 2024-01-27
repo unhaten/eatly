@@ -36,7 +36,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
     });
 
     const drawer = (
-        <Box padding={3} height={"100%"}>
+        <Box padding={3} height={"100%"} borderRight='1px solid transparent' borderColor={'#E0E0E0'}>
             <Box
                 component={Link}
                 to="/"

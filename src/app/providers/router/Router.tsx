@@ -9,6 +9,8 @@ import { paths } from '../../../shared/config/routes/paths'
 import Layout from '../../../widgets/layout'
 import HomePage from '../../../pages/home'
 import { FC } from 'react'
+import DashboardLayout from '../../../widgets/dashboardLayout'
+import OrdersPage from '../../../pages/orders'
 
 interface RouterProps {}
 
@@ -17,10 +19,12 @@ const Router: FC<RouterProps> = () => {
 	const router = createBrowserRouter(
 		createRoutesFromElements(
 			<>
-				<Route path={paths.home} element={<Layout />}>
-					<Route index element={<HomePage></HomePage>} />
-					<Route path={paths.orders} element={<>orders</>} />
-					<Route path={paths.messages} element={<>messages</>} />
+				<Route path={paths.index} element={<Layout />}>
+					<Route path={paths.home} element={<DashboardLayout />}>
+						<Route index element={<HomePage></HomePage>} />
+						<Route path={paths.orders} element={<OrdersPage />} />
+						<Route path={paths.messages} element={<>messages</>} />
+					</Route>
 				</Route>
 				<Route path={paths.auth} element={<>Auth</>} />
 				<Route path={paths.register} element={<>reg</>} />
