@@ -24,7 +24,7 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 			<img
 				src={nearby ? restaurant.image : ''}
 				alt='productImage'
-				loading='lazy'
+				// loading='lazy'
 			/>
 			<Box
 				className={s.content}

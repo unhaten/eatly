@@ -153,7 +153,7 @@ let theme = createTheme({
 			fontSize: '0.875rem',
 			letterSpacing: '0.0125rem',
 			lineHeight: '1.3125rem',
-			fontFamily: [
+			fontFamily: [	
 				'Manrope',
 				'Roboto',
 				'"Helvetica Neue"',

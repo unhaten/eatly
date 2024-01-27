@@ -70,7 +70,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
 										<Typography variant='navLinks'>
 											{item.name}
 										</Typography>
-                                        <SidebarEventCount />
+										<SidebarEventCount event={item.name} />
 									</ListItemButton>
 								</ListItem>
 							</NavLink>

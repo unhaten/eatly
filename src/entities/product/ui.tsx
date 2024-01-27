@@ -1,7 +1,6 @@
 import { Box } from '@mui/material'
 import { ProductProps } from './types/types'
 import { FC } from 'react'
-import s from './style.module.scss'
 import CardInfo from '../../shared/ui/CardInfo'
 import AddFavorites from '../../features/addFavorites'
 import AddToCart from '../../features/addToCart'
@@ -27,7 +26,7 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 			<img
 				src={popular ? product.image : ''}
 				alt='productImage'
-				loading='lazy'
+				// loading='lazy'
 			/>
 			<Box
 				sx={{
