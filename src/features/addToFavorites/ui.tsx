@@ -21,8 +21,6 @@ const AddToFavorites: FC<IAddToFavorites> = ({ item, product }) => {
 		dispatch(addToFavorites(product))
 	}
 
-	console.log(favoriteProducts.includes(item))
-
 	return (
 		<>
 			<IconButton
