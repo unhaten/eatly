@@ -3,9 +3,11 @@ import { productAPI } from '../../../entities/product/model/services/product.ser
 import { restaurantAPI } from '../../../entities/restaurant/model/services/restaurant.service'
 import { userAPI } from '../../../entities/user/model/services/user.service'
 import productReducer from '../../../entities/product/model/reducers/product.slice'
+import restaurantReducer from '../../../entities/restaurant/model/reducers/restaurant.slice'
 
 const rootReducer = combineReducers({
 	productReducer,
+	restaurantReducer,
 	[productAPI.reducerPath]: productAPI.reducer,
 	[restaurantAPI.reducerPath]: restaurantAPI.reducer,
 	[userAPI.reducerPath]: userAPI.reducer

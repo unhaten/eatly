@@ -2,7 +2,7 @@ import { Box } from '@mui/material'
 import { ProductProps } from './types/types'
 import { FC } from 'react'
 import CardInfo from '../../shared/ui/CardInfo'
-import AddToFavorites from '../../features/addToFavorites'
+import ToggleFavorites from '../../features/toggleFavorites'
 import AddToCart from '../../features/addToCart'
 import FormattedPrice from '../../features/formattedPrice'
 
@@ -44,7 +44,7 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 					<AddToCart product={product} />
 				</Box>
 			</Box>
-			{popular && <AddToFavorites item={product} product />}
+			{popular && <ToggleFavorites item={product} product />}
 		</Box>
 	)
 }

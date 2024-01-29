@@ -4,7 +4,10 @@ const themeConfig = {
 		secondary: '#F7F8FA',
 		caption: '#ACADB9',
 		error: '#F1534E',
-		accent: '#6C5FBC'
+		accent: {
+			main: '#6C5FBC',
+			dark: '#6B5FBC1A'
+		}
 	},
 	filter: {
 		pizza: {

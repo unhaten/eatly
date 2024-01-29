@@ -7,27 +7,35 @@ import { useAppDispatch, useAppSelector } from '../../shared/lib/hooks/redux'
 import { productSlice } from '../../entities/product/model/reducers/product.slice'
 import { IProduct } from '../../entities/product/types/types'
 
-interface IAddToFavorites {
+interface IToggleFavorites {
 	product?: boolean
 	item: IProduct
 }
 
-const AddToFavorites: FC<IAddToFavorites> = ({ item, product }) => {
+const ToggleFavorites: FC<IToggleFavorites> = ({ item, product }) => {
 	const dispatch = useAppDispatch()
-	const { addToFavorites } = productSlice.actions
+	const { toggleFavorites } = productSlice.actions
 	const { favoriteProducts } = useAppSelector(state => state.productReducer)
 
 	const handleClick = (product: IProduct) => {
-		dispatch(addToFavorites(product))
+		dispatch(toggleFavorites(product))
 	}
+
+	const isIncluded = favoriteProducts.includes(item)
 
 	return (
 		<>
 			<IconButton
 				onClick={() => handleClick(item)}
 				className={product ? s.absolute : ''}
+				sx={{
+					':hover': {
+						backgroundColor: isIncluded && 'accent.dark'
+					}
+				}}
+				color={isIncluded ? 'accent' : ''}
 			>
-				{product && !favoriteProducts.includes(item) ? (
+				{product && !isIncluded ? (
 					<FavoriteBorderRoundedIcon fontSize='small' />
 				) : (
 					<FavoriteRoundedIcon
@@ -40,4 +48,4 @@ const AddToFavorites: FC<IAddToFavorites> = ({ item, product }) => {
 	)
 }
 
-export default AddToFavorites
+export default ToggleFavorites

@@ -10,13 +10,13 @@ const NearbyRestaurantList = () => {
 		<Box
 			component={List}
 			display='flex'
-			justifyContent={'space-between'}
+			justifyContent={{ xs: 'center', md: 'space-between' }}
 			alignItems='center'
 			flexWrap={'wrap'}
-			gap={2}
+			gap={{ xs: 3, md: 2 }}
 			sx={{
 				'& li': {
-					flexBasis: '30%',
+					flexBasis: { xs: '100%', sm: '40%', md: '30%' },
 					maxWidth: '300px',
 					borderRadius: 4,
 					padding: 0,

@@ -43,6 +43,8 @@ declare module '@mui/material/styles' {
 		// accent: PaletteOptions["primary"];
 		// caption: PaletteOptions["primary"];
 		main?: string
+		dark?: string
+		light?: string
 		color?: string
 		bgColor?: string
 		healthy?: {
@@ -82,7 +84,8 @@ let theme = createTheme({
 		//     main: themeConfig.palette.secondary,
 		// },
 		accent: {
-			main: themeConfig.palette.accent
+			main: themeConfig.palette.accent.main,
+			dark: themeConfig.palette.accent.dark
 		},
 		error: {
 			main: themeConfig.palette.error
@@ -153,7 +156,7 @@ let theme = createTheme({
 			fontSize: '0.875rem',
 			letterSpacing: '0.0125rem',
 			lineHeight: '1.3125rem',
-			fontFamily: [	
+			fontFamily: [
 				'Manrope',
 				'Roboto',
 				'"Helvetica Neue"',

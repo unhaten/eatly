@@ -8,6 +8,7 @@ const Filter = () => {
 			display='flex'
 			justifyContent={'center'}
 			alignItems='center'
+			flexWrap={'wrap'}
 			gap={2}
 			mt={6}
 		>
