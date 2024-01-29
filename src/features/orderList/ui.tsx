@@ -22,6 +22,7 @@ const OrderList: FC<IOrderList> = ({ products }) => {
 					}
 				}}
 			>
+				{/* //! TODO: reveal only unique values */}
 				{products.map(product => (
 					<ListItem className={s.item}>
 						<Box

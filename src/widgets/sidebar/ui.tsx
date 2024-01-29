@@ -64,7 +64,11 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
 						return (
 							<NavLink key={index} to={item.path}>
 								<ListItem disablePadding>
-									<ListItemButton>
+									<ListItemButton
+										sx={{
+											height: '45px'
+										}}
+									>
 										<ListItemIcon>{item.icon}</ListItemIcon>
 										{/* <ListItemText primary={text} /> */}
 										<Typography variant='navLinks'>

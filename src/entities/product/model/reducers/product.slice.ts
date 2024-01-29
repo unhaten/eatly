@@ -4,17 +4,20 @@ import { IProduct } from '../../types/types'
 interface ProductState {
 	products: IProduct[]
 	favoriteProducts: IProduct[]
+	count: number
 }
 
 const initialState: ProductState = {
 	products: [],
-	favoriteProducts: []
+	favoriteProducts: [],
+	count: 0
 }
 
 export const productSlice = createSlice({
 	name: 'products',
 	initialState,
 	reducers: {
+		// ! TODO: unique values stack together by counting them
 		addToCart(state, action: PayloadAction<IProduct>) {
 			state.products.push(action.payload)
 		},

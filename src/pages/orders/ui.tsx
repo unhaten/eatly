@@ -1,4 +1,4 @@
-import { Button, IconButton, Typography, Box } from '@mui/material'
+import { Button, Typography, Box } from '@mui/material'
 import { useAppSelector } from '../../shared/lib/hooks/redux'
 import OrderList from '../../features/orderList'
 import ApplyCoupon from '../../features/applyCoupon'
@@ -6,6 +6,7 @@ import OrderCount from '../../features/orderCount'
 import PlaceOrder from '../../features/placeOrder'
 import { Link } from 'react-router-dom'
 import s from './style.module.scss'
+import GoBack from '../../features/goBack'
 
 const OrdersPage = () => {
 	const { products } = useAppSelector(state => state.productReducer)
@@ -13,17 +14,7 @@ const OrdersPage = () => {
 	return (
 		<>
 			<section className={s.section}>
-				<IconButton
-					sx={{
-						width: '45px',
-						height: '45px',
-						boxShadow:
-							'5.921px 11.842px 23.684px rgba(183, 179, 193, 0.30)',
-						borderRadius: 4
-					}}
-				>
-					{'<'}
-				</IconButton>
+				<GoBack />
 				{products.length > 0 ? (
 					<form>
 						<OrderList products={products} />

@@ -20,7 +20,11 @@ const AddToCart: FC<IAddToCart> = ({ product }) => {
 	return (
 		<>
 			<IconButton onClick={() => handleAdd(product)}>
-				<AddBoxRoundedIcon />
+				<AddBoxRoundedIcon
+					sx={{
+						color: '#323142'
+					}}
+				/>
 			</IconButton>
 		</>
 	)
