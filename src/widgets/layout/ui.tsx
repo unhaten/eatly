@@ -20,6 +20,7 @@ const Layout: FunctionComponent<LayoutProps> = () => {
 
 	return (
 		<div className={s.container}>
+
 			<CssBaseline />
 			<Header handleDrawerToggle={handleDrawerToggle} />
 			<Box component='main' display='flex'>

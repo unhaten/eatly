@@ -8,6 +8,7 @@ export interface IProduct {
 	image: string
 	imageThin: string
 	visits: number
+	quantity: number
 }
 
 export interface ProductProps {

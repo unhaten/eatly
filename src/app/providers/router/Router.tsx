@@ -8,13 +8,15 @@ import {
 import { paths } from '../../../shared/config/routes/paths'
 import Layout from '../../../widgets/layout'
 import HomePage from '../../../pages/home'
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import DashboardLayout from '../../../widgets/dashboardLayout'
 import OrdersPage from '../../../pages/orders'
 
-interface RouterProps {}
+interface RouterProps {
+	children?: ReactNode
+}
 
-const Router: FC<RouterProps> = () => {
+const Router: FC<RouterProps> = ({ children }) => {
 	// console.log(window.location.pathname);
 	const router = createBrowserRouter(
 		createRoutesFromElements(
