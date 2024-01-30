@@ -4,6 +4,8 @@ import { Box, IconButton, Typography } from '@mui/material'
 import { productSlice } from '../../entities/product/model/reducers/product.slice'
 import { useAppDispatch } from '../../shared/lib/hooks/redux'
 import FormattedPrice from '../formattedPrice'
+import AddRoundedIcon from '@mui/icons-material/AddRounded'
+import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded'
 
 interface IOrderProductCount {
 	product: IProduct
@@ -25,22 +27,28 @@ const OrderProductCount: FC<IOrderProductCount> = ({ product }) => {
 		<>
 			<Box
 				my={3}
-				mr={5}
+				mr={6}
 				display='flex'
 				flexDirection='column'
 				alignItems='center'
 			>
 				<Box display='flex' gap={1} alignItems='center'>
-					<IconButton onClick={() => handleDecrement(product.id)}>
-						-
+					<IconButton
+						onClick={() => handleDecrement(product.id)}
+						size='large'
+					>
+						<RemoveRoundedIcon />
 					</IconButton>
 					<Typography variant='h6'>
 						{product.quantity < 10
 							? `0${product.quantity}`
 							: product.quantity}
 					</Typography>
-					<IconButton onClick={() => handleIncrement(product.id)}>
-						+
+					<IconButton
+						onClick={() => handleIncrement(product.id)}
+						size='large'
+					>
+						<AddRoundedIcon />
 					</IconButton>
 				</Box>
 				<Typography variant='body1' fontWeight={600}>

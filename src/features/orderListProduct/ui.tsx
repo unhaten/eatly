@@ -15,6 +15,7 @@ const OrderListProduct: FC<IOrderListProduct> = ({ product }) => {
 		<>
 			<ListItem className={s.item} key={product.id}>
 				<Box
+					position={'relative'}
 					display='flex'
 					justifyContent={'space-between'}
 					alignItems='center'

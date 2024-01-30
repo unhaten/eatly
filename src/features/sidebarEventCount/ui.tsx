@@ -8,7 +8,7 @@ interface ISidebarEventCount {
 }
 
 const SidebarEventCount: FC<ISidebarEventCount> = ({ event }) => {
-	const { products } = useAppSelector(state => state.productReducer)
+	const { products, amount } = useAppSelector(state => state.productReducer)
 
 	return (
 		<>
@@ -18,7 +18,7 @@ const SidebarEventCount: FC<ISidebarEventCount> = ({ event }) => {
 						sx={{ backgroundColor: 'accent.main' }}
 						className={s.orders}
 					>
-						{products.length}
+						{amount}
 					</Box>
 				)}
 			</Box>

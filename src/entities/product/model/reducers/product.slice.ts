@@ -4,12 +4,13 @@ import { IProduct } from '../../types/types'
 interface ProductState {
 	products: IProduct[]
 	favoriteProducts: IProduct[]
-	quantity: number
+	amount: number
 }
 
 const initialState: ProductState = {
 	products: [],
-	favoriteProducts: []
+	favoriteProducts: [],
+	amount: 0
 }
 
 export const productSlice = createSlice({
@@ -26,12 +27,14 @@ export const productSlice = createSlice({
 			} else {
 				state.products.push({ ...action.payload, quantity: 1 })
 			}
+			state.amount++
 		},
 		incrementQuantity(state, action: PayloadAction<string>) {
 			const product = state.products.find(
 				item => item.id === action.payload
 			)
 			product && product.quantity++
+			state.amount++
 		},
 		decrementQuantity(state, action: PayloadAction<string>) {
 			const product = state.products.find(
@@ -45,6 +48,8 @@ export const productSlice = createSlice({
 			// } else if (product?.quantity? > 1) {
 			// 	product.quantity--
 			// }
+			state.amount--
+			// !FIXME: in sidebar amount of products can go -1 and less
 		},
 		removeFromCart(state, action: PayloadAction<IProduct>) {
 			state.products = state.products.filter(

@@ -3,6 +3,8 @@ import { productSlice } from '../../entities/product/model/reducers/product.slic
 import { useAppDispatch } from '../../shared/lib/hooks/redux'
 import { IProduct } from '../../entities/product/types/types'
 import { FC } from 'react'
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded'
+import s from './style.module.scss'
 
 interface IRemoveFromCart {
 	product: IProduct
@@ -18,7 +20,16 @@ const RemoveFromCart: FC<IRemoveFromCart> = ({ product }) => {
 
 	return (
 		<>
-			<IconButton onClick={() => handleClick(product)}>delete</IconButton>
+			<IconButton
+				sx={{
+					position: 'absolute'
+				}}
+				className={s.button}
+				onClick={() => handleClick(product)}
+				size='large'
+			>
+				<DeleteRoundedIcon color='error' />
+			</IconButton>
 		</>
 	)
 }
