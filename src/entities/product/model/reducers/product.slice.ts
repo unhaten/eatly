@@ -17,7 +17,6 @@ export const productSlice = createSlice({
 	name: 'products',
 	initialState,
 	reducers: {
-		// ! TODO: unique values stack together by counting them
 		addToCart(state, action: PayloadAction<IProduct>) {
 			const productInCart = state.products.find(
 				product => product.id === action.payload.id
@@ -40,27 +39,23 @@ export const productSlice = createSlice({
 			const product = state.products.find(
 				item => item.id === action.payload
 			)
-			product?.quantity === 1
-				? (product.quantity = 1)
-				: product.quantity--
-			// if (product?.quantity === 1) {
-			// 	product.quantity = 1
-			// } else if (product?.quantity? > 1) {
-			// 	product.quantity--
-			// }
-			state.amount--
-			// !FIXME: in sidebar amount of products can go -1 and less
+			if (product?.quantity === 1) {
+				product.quantity = 1
+				// state.amount = 1
+			} else {
+				product.quantity--
+				state.amount--
+			}
 		},
 		removeFromCart(state, action: PayloadAction<IProduct>) {
+			const isMultiple = state.products.find(
+				product => product.id === action.payload.id
+			)
+			state.amount = state.amount - isMultiple?.quantity
 			state.products = state.products.filter(
 				product => product.id !== action.payload.id
 			)
 		},
-		// addToFavorites(state, action: PayloadAction<IProduct>) {
-		// 	// ! FIXME: does not operate properly from the first time and I cant use .includes() because of this
-		// 	// console.log(current(state.favoriteProducts), 'favProd')
-		// 	state.favoriteProducts.push(action.payload)
-		// },
 		toggleFavorites(state, action: PayloadAction<IProduct>) {
 			const isExists = state.favoriteProducts.some(
 				product => product.id === action.payload.id
@@ -75,8 +70,6 @@ export const productSlice = createSlice({
 			} else {
 				state.favoriteProducts.push(action.payload)
 			}
-
-			// state.favoriteProducts.push(action.payload)
 		}
 	}
 })

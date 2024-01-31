@@ -22,7 +22,7 @@ const OrderList: FC<IOrderList> = ({ products }) => {
 				}}
 			>
 				{products.map(product => (
-					<OrderListProduct product={product} />
+					<OrderListProduct key={product.id} product={product} />
 				))}
 			</List>
 		</>

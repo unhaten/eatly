@@ -12,8 +12,7 @@ interface IOrderListProduct {
 
 const OrderListProduct: FC<IOrderListProduct> = ({ product }) => {
 	return (
-		<>
-			<ListItem className={s.item} key={product.id}>
+			<ListItem className={s.item}>
 				<Box
 					position={'relative'}
 					display='flex'
@@ -46,7 +45,6 @@ const OrderListProduct: FC<IOrderListProduct> = ({ product }) => {
 					<RemoveFromCart product={product} />
 				</Box>
 			</ListItem>
-		</>
 	)
 }
 
