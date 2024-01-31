@@ -7,7 +7,10 @@ interface IAltButton {
 
 const AltButton: FC<IAltButton> = ({ text }) => {
 	return (
-		<Button variant='contained'>
+		<Button
+			variant='contained'
+			// color='accent' sx={{ color: 'white' }}
+		>
 			<span>{text}</span>
 		</Button>
 	)

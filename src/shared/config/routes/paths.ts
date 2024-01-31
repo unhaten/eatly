@@ -9,5 +9,9 @@ export const paths = {
 	auth: 'auth',
 	orders: '/orders',
 	messages: '/messages',
+	products: '/products',
+	productDetails: '/products/:id',
+	restaurants: '/restaurants',
+	restaurantDetails: '/restaurants/:id',
 	notFound: '*'
 }

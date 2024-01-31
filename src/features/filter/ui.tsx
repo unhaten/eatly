@@ -1,7 +1,17 @@
 import { List, ListItem, Typography, Box, ListItemButton } from '@mui/material'
 import options from './lib/config'
+import { useSearchParams } from 'react-router-dom'
 
 const Filter = () => {
+	const [searchParams, setSearchParams] = useSearchParams()
+
+	const handleClick = (value) => {
+		setSearchParams(prev => {
+			prev.set('filter', value)
+			return prev
+		})
+	}
+
 	return (
 		<Box
 			component={List}
@@ -25,6 +35,7 @@ const Filter = () => {
 							boxShadow:
 								'0px 19.6px 29.4px rgba(135, 125, 200, 0.25)'
 						}}
+						onClick={() => handleClick(item.name)}
 					>
 						<Box
 							component={ListItemButton}

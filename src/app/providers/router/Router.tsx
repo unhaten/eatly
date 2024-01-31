@@ -16,33 +16,29 @@ interface RouterProps {
 	children?: ReactNode
 }
 
-const Router: FC<RouterProps> = ({ children }) => {
-	// console.log(window.location.pathname);
-	const router = createBrowserRouter(
-		createRoutesFromElements(
-			<>
-				<Route path={paths.index} element={<Layout />}>
-					<Route path={paths.home} element={<DashboardLayout />}>
-						<Route index element={<HomePage></HomePage>} />
-						<Route path={paths.orders} element={<OrdersPage />} />
-						<Route path={paths.messages} element={<>messages</>} />
-					</Route>
+// console.log(window.location.pathname);
+export const router = createBrowserRouter(
+	createRoutesFromElements(
+		<>
+			<Route path={paths.index} element={<Layout />}>
+				<Route path={paths.home} element={<DashboardLayout />}>
+					<Route index element={<HomePage></HomePage>} />
+					<Route path={paths.orders} element={<OrdersPage />} />
+					<Route path={paths.messages} element={<>messages</>} />
 				</Route>
-				<Route path={paths.auth} element={<>Auth</>} />
-				<Route path={paths.register} element={<>reg</>} />
-				<Route
-					path={paths.notFound}
-					element={
-						<>
-							not found, <Link to='/'>go home</Link>
-						</>
-					}
-				/>
-			</>
-		)
+			</Route>
+			<Route path={paths.auth} element={<>Auth</>} />
+			<Route path={paths.register} element={<>reg</>} />
+			<Route
+				path={paths.notFound}
+				element={
+					<>
+						not found, <Link to='/'>go home</Link>
+					</>
+				}
+			/>
+		</>
 	)
+)
 
-	return <RouterProvider router={router}></RouterProvider>
-}
-
-export default Router
+// return <RouterProvider router={router}></RouterProvider>

@@ -5,10 +5,10 @@ const ApplyCoupon = () => {
 	return (
 		<>
 			<Box mt={15}>
-				<FormControl>
-					<Input placeholder='Apply Coupon'></Input>
+				<Box component={FormControl}>
+					<Input placeholder='Apply Coupon' />
 					<AltButton text={'Apply'} />
-				</FormControl>
+				</Box>
 			</Box>
 		</>
 	)
