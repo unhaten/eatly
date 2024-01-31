@@ -27,7 +27,7 @@ const OrderProductCount: FC<IOrderProductCount> = ({ product }) => {
 		<>
 			<Box
 				my={3}
-				mr={6}
+				mr={{ sm: 6 }}
 				display='flex'
 				flexDirection='column'
 				alignItems='center'

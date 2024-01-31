@@ -2,6 +2,7 @@ import { List } from '@mui/material'
 import { IProduct } from '../../entities/product/types/types'
 import { FC } from 'react'
 import OrderListProduct from '../orderListProduct'
+import s from './style.module.scss'
 
 interface IOrderList {
 	products: IProduct[]
@@ -11,13 +12,15 @@ const OrderList: FC<IOrderList> = ({ products }) => {
 	return (
 		<>
 			<List
+				className={s.list}
 				sx={{
 					mt: 4,
 
 					'& li': {
-						padding: 2,
+						padding: { xs: 4, sm: 2 },
 						margin: '0 auto',
-						maxWidth: '700px'
+						maxWidth: '700px',
+						width: { xs: 'fit-content', sm: '1' }
 					}
 				}}
 			>

@@ -34,7 +34,7 @@ const FormattedPrice: FC<IFormattedPrice> = ({ price, inCard, inOrder }) => {
 				</Typography>
 			)}
 			{inOrder && (
-				<Typography variant='body1' fontWeight={600}>
+				<Typography variant='body1' align='center' fontWeight={600}>
 					{formattedCurrency[0]}.{formattedCurrency[1]}
 				</Typography>
 			)}

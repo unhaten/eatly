@@ -12,39 +12,43 @@ interface IOrderListProduct {
 
 const OrderListProduct: FC<IOrderListProduct> = ({ product }) => {
 	return (
-			<ListItem className={s.item}>
+		<ListItem
+			className={s.item}
+			sx={{
+				position: 'relative'
+			}}
+		>
+			<Box
+				display='flex'
+				justifyContent={{ xs: 'start', sm: 'space-between' }}
+				alignItems='center'
+				flexDirection={{ xs: 'column', sm: 'row' }}
+				width={{ sm: 1 }}
+			>
 				<Box
-					position={'relative'}
-					display='flex'
-					justifyContent={'space-between'}
+					className={s.left}
+					display={{ sm: 'flex' }}
 					alignItems='center'
-					width={1}
+					gap={2}
 				>
+					<img src={product.image} alt='' className={s.image} />
 					<Box
-						className={s.left}
 						display='flex'
-						alignItems='center'
-						gap={2}
+						flexDirection='column'
+						mt={{ xs: 2, sm: 0 }}
 					>
-						<img
-							src={product.image}
-							width={'100px'}
-							height={'100px'}
-							alt=''
-						/>
-						<Box display='flex' flexDirection='column'>
-							<Typography fontWeight={600}>
-								{product.name}
-							</Typography>
-							<FormattedPrice price={product.price} inOrder />
-						</Box>
+						<Typography fontWeight={600} align='center'>
+							{product.name}
+						</Typography>
+						<FormattedPrice price={product.price} inOrder />
 					</Box>
-					<Box className={s.right}>
-						<OrderProductCount product={product} />
-					</Box>
-					<RemoveFromCart product={product} />
 				</Box>
-			</ListItem>
+				<Box className={s.right}>
+					<OrderProductCount product={product} />
+				</Box>
+				<RemoveFromCart product={product} />
+			</Box>
+		</ListItem>
 	)
 }
 

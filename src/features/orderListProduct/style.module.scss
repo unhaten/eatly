@@ -5,6 +5,13 @@
 	box-shadow: 0px 19.942px 29.913px 0px rgba(70, 70, 70, 0.1);
 }
 
-.item:not(:first-child) {
-	margin-top: 20px;
+.image {
+	max-width: 120px;
+	max-height: 120px;
+}
+
+@media screen and (min-width: 600px) {
+	.item:not(:first-child) {
+		margin-top: 20px;
+	}
 }
