@@ -47,6 +47,7 @@ declare module '@mui/material/styles' {
 		light?: string
 		color?: string
 		bgColor?: string
+		contrastText?: string
 		healthy?: {
 			color?: string
 			bgColor?: string
@@ -75,6 +76,21 @@ declare module '@mui/material/Typography' {
 	// }
 }
 
+declare module '@mui/material/styles' {
+	interface CustomPalette {
+		violet: PaletteColorOptions
+	}
+	interface Palette extends CustomPalette {}
+	interface PaletteOptions extends CustomPalette {}
+}
+
+declare module '@mui/material/Button' {
+	interface ButtonPropsColorOverrides {
+		violet: true
+		accent: true
+	}
+}
+
 let theme = createTheme({
 	palette: {
 		// primary: {
@@ -83,9 +99,12 @@ let theme = createTheme({
 		// secondary: {
 		//     main: themeConfig.palette.secondary,
 		// },
+		violet: {},
 		accent: {
 			main: themeConfig.palette.accent.main,
-			dark: themeConfig.palette.accent.dark
+			dark: themeConfig.palette.accent.dark,
+			light: '#8B80D8',
+			contrastText: themeConfig.palette.secondary
 		},
 		error: {
 			main: themeConfig.palette.error

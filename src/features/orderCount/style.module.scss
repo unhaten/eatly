@@ -2,3 +2,9 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+.subtotal,
+.delivery {
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #acadb9;
+}

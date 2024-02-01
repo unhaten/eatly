@@ -51,12 +51,10 @@ const OrderProductCount: FC<IOrderProductCount> = ({ product }) => {
 						<AddRoundedIcon />
 					</IconButton>
 				</Box>
-				<Typography variant='body1' fontWeight={600}>
-					<FormattedPrice
-						inOrder
-						price={product.price * product.quantity}
-					/>
-				</Typography>
+				<FormattedPrice
+					inOrder
+					price={product.price * product.quantity}
+				/>
 			</Box>
 		</>
 	)

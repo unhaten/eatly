@@ -19,7 +19,6 @@ const OrderList: FC<IOrderList> = ({ products }) => {
 					'& li': {
 						padding: { xs: 4, sm: 2 },
 						margin: '0 auto',
-						maxWidth: '700px',
 						width: { xs: 'fit-content', sm: '1' }
 					}
 				}}

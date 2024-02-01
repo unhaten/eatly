@@ -16,7 +16,7 @@ const OrdersPage = () => {
 			<section className={s.section}>
 				<GoBack />
 				{products.length > 0 ? (
-					<form>
+					<form className={s.form}>
 						<OrderList products={products} />
 						<ApplyCoupon />
 						<OrderCount />
