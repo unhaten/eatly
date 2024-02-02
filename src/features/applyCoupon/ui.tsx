@@ -7,7 +7,7 @@ const ApplyCoupon = () => {
 	return (
 		<>
 			<Box
-				mt={15}
+				mt={{ xs: 5, sm: 15 }}
 				display={{ xs: 'block', sm: 'flex' }}
 				gap={1}
 				alignItems='center'

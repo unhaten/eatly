@@ -11,7 +11,6 @@ const AltButton: FC<IAltButton> = ({ text, className = '' }) => {
 		<Box
 			component={Button}
 			variant='contained'
-			color={'accent.contrastColor'}
 			borderRadius={3.5}
 			padding={2}
 			sx={{

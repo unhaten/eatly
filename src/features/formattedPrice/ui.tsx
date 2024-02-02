@@ -7,9 +7,17 @@ interface IFormattedPrice {
 	price: IProduct['price']
 	inCard?: boolean
 	inOrder?: boolean
+	variant?: string
+	fontWeight?: number
 }
 
-const FormattedPrice: FC<IFormattedPrice> = ({ price, inCard, inOrder }) => {
+const FormattedPrice: FC<IFormattedPrice> = ({
+	price,
+	inCard,
+	inOrder,
+	variant,
+	fontWeight
+}) => {
 	const formatter = new Intl.NumberFormat('en-US', {
 		style: 'currency',
 		currency: 'USD'
@@ -34,7 +42,12 @@ const FormattedPrice: FC<IFormattedPrice> = ({ price, inCard, inOrder }) => {
 				</Typography>
 			)}
 			{inOrder && (
-				<Typography variant='body1' align='center' fontWeight={600}>
+				<Typography
+					// @ts-expect-error variant does not allow such checking somehow
+					variant={variant ? variant : 'body1'}
+					align='center'
+					fontWeight={fontWeight ? fontWeight : 600}
+				>
 					{formattedCurrency[0]}.{formattedCurrency[1]}
 				</Typography>
 			)}
