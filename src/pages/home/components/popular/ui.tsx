@@ -1,5 +1,6 @@
-import { Typography, Box } from '@mui/material'
+import { Typography, Box, Button } from '@mui/material'
 import PopularProductList from '../../../../entities/product/components/popularProductList'
+import { Link } from 'react-router-dom'
 
 const Popular = () => {
 	return (
@@ -14,13 +15,11 @@ const Popular = () => {
 				<Typography variant='h5' component='h2' fontWeight={600}>
 					Most Popular
 				</Typography>
-				<Typography
-					color='caption.main'
-					fontWeight={500}
-					sx={{ cursor: 'pointer' }}
-				>
-					View all
-				</Typography>
+				<Link to='/products'>
+					<Box component={Button} color='caption.main'>
+						<span>View all</span>
+					</Box>
+				</Link>
 			</Box>
 			<PopularProductList />
 		</section>

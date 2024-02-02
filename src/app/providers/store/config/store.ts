@@ -1,9 +1,9 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { productAPI } from '../../../entities/product/model/services/product.service'
-import { restaurantAPI } from '../../../entities/restaurant/model/services/restaurant.service'
-import { userAPI } from '../../../entities/user/model/services/user.service'
-import productReducer from '../../../entities/product/model/reducers/product.slice'
-import restaurantReducer from '../../../entities/restaurant/model/reducers/restaurant.slice'
+import { productAPI } from '../../../../entities/product/model/services/product.service'
+import { restaurantAPI } from '../../../../entities/restaurant/model/services/restaurant.service'
+import { userAPI } from '../../../../entities/user/model/services/user.service'
+import productReducer from '../../../../entities/product/model/reducers/product.slice'
+import restaurantReducer from '../../../../entities/restaurant/model/reducers/restaurant.slice'
 
 const rootReducer = combineReducers({
 	productReducer,
