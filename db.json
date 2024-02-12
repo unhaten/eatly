@@ -108,6 +108,16 @@
 			"image": "./src/shared/assets/img/restaurant3.jpg",
 			"imageThin": "",
 			"visits": 0
+		},
+		{
+			"id": "4",
+			"name": "Periscope",
+			"type": "trending",
+			"deliveryTime": 35,
+			"rate": 4.7,
+			"image": "./src/shared/assets/img/restaurant3.jpg",
+			"imageThin": "",
+			"visits": 0
 		}
 	]
 }

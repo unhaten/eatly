@@ -1,6 +1,6 @@
 import { Typography, Box, Button } from '@mui/material'
-import NearbyRestaurantList from '../../../../entities/restaurant/components/nearbyRestaurantList'
 import { Link } from 'react-router-dom'
+import RestaurantList from '../../../../widgets/restaurantList'
 
 const Nearby = () => {
 	return (
@@ -21,7 +21,7 @@ const Nearby = () => {
 					</Box>
 				</Link>
 			</Box>
-			<NearbyRestaurantList />
+			<RestaurantList nearby />
 		</section>
 	)
 }
