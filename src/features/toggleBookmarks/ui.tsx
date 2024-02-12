@@ -31,7 +31,7 @@ const ToggleBookmarks: FC<IToggleBookmarks> = ({ restaurant, item }) => {
 				size={'large'}
 				sx={{
 					':hover': {
-						backgroundColor: isIncluded && 'accent.dark'
+						backgroundColor: isIncluded ? 'accent.light' : ''
 					}
 				}}
 				color={isIncluded ? 'accent' : ''}

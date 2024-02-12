@@ -5,15 +5,15 @@ import { FC, ReactNode } from 'react'
 import { Outlet } from 'react-router-dom'
 
 interface IDashboardLayout {
-	children?: ReactNode
+	children: ReactNode
 }
 
-const DashboardLayout: FC<IDashboardLayout> = () => {
+const DashboardLayout: FC<IDashboardLayout> = ({ children }) => {
 	return (
 		<>
 			<Grid container justifyContent={'space-between'} gap={4}>
 				<Grid item xs={12} lg={8}>
-					<Outlet />
+					{children}
 				</Grid>
 				<Grid item xs={12} lg={3.5}>
 					<Wallet />

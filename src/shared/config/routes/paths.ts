@@ -2,10 +2,11 @@ import { RouteProps } from 'react-router'
 
 export type AppRoutesWithAuthProps = RouteProps & {
 	authOnly?: boolean
+	dashboardLayout?: boolean
+	noLayout?: boolean
 }
 
 export enum AppRoutes {
-	INDEX = 'index',
 	HOME = 'home',
 	REGISTER = 'register',
 	AUTH = 'auth',
@@ -19,7 +20,6 @@ export enum AppRoutes {
 }
 
 export const paths: Record<AppRoutes, string> = {
-	[AppRoutes.INDEX]: '/',
 	[AppRoutes.HOME]: '/',
 	[AppRoutes.REGISTER]: '/register',
 	[AppRoutes.AUTH]: '/auth',

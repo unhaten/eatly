@@ -4,53 +4,48 @@ import {
 	paths
 } from '../../../../shared/config/routes/paths'
 import HomePage from '../../../../pages/home'
-import Layout from '../../../../widgets/layout'
-import DashboardLayout from '../../../../widgets/dashboardLayout'
 import OrdersPage from '../../../../pages/orders'
 
 export const routeConfig: Record<AppRoutes, AppRoutesWithAuthProps> = {
-	[AppRoutes.INDEX]: {
-		path: paths.messages,
-		element: <Layout />
-	},
 	[AppRoutes.HOME]: {
 		path: paths.home,
-		element: <HomePage />
+		element: <HomePage />,
+		dashboardLayout: true
 	},
 	[AppRoutes.ORDERS]: {
-		path: paths.messages,
+		path: paths.orders,
 		element: <OrdersPage />
 	},
 	[AppRoutes.MESSAGES]: {
 		path: paths.messages,
-		element: <HomePage />
+		element: <>messages</>
 	},
 	[AppRoutes.AUTH]: {
-		path: paths.messages,
-		element: <HomePage />
+		path: paths.auth,
+		element: <>auth</>
 	},
 	[AppRoutes.REGISTER]: {
-		path: paths.messages,
-		element: <HomePage />
+		path: paths.register,
+		element: <>register</>
 	},
 	[AppRoutes.PRODUCTS]: {
-		path: paths.messages,
-		element: <HomePage />
+		path: paths.products,
+		element: <>products</>
 	},
 	[AppRoutes.PRODUCT_DETAILS]: {
-		path: paths.messages,
-		element: <HomePage />
+		path: paths.productDetails,
+		element: <>product details</>
 	},
 	[AppRoutes.RESTAURANTS]: {
-		path: paths.messages,
-		element: <HomePage />
+		path: paths.restaurants,
+		element: <>restaurants</>
 	},
 	[AppRoutes.RESTAURANT_DETAILS]: {
-		path: paths.messages,
-		element: <HomePage />
+		path: paths.restaurantDetails,
+		element: <>restaurant details</>
 	},
 	[AppRoutes.NOT_FOUND]: {
-		path: paths.messages,
-		element: <HomePage />
+		path: paths.notFound,
+		element: <>not found</>
 	}
 }

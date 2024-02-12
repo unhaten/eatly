@@ -1,44 +1,43 @@
-import {
-	RouterProvider,
-	Route,
-	createBrowserRouter,
-	createRoutesFromElements,
-	Link
-} from 'react-router-dom'
-import { paths } from '../../../shared/config/routes/paths'
+import { Suspense, FC, memo, useCallback } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { AppRoutesWithAuthProps } from '../../../shared/config/routes/paths'
+import { routeConfig } from './config/RouteConfig'
 import Layout from '../../../widgets/layout'
-import HomePage from '../../../pages/home'
-import { FC, ReactNode } from 'react'
 import DashboardLayout from '../../../widgets/dashboardLayout'
-import OrdersPage from '../../../pages/orders'
 
-interface RouterProps {
-	children?: ReactNode
-}
+const AppRouter: FC = () => {
+	const renderWithWrapper = useCallback((route: AppRoutesWithAuthProps) => {
+		const { path, element, authOnly, dashboardLayout, noLayout } = route
 
-// console.log(window.location.pathname);
-export const router = createBrowserRouter(
-	createRoutesFromElements(
-		<>
-			<Route path={paths.index} element={<Layout />}>
-				<Route path={paths.home} element={<DashboardLayout />}>
-					<Route index element={<HomePage></HomePage>} />
-					<Route path={paths.orders} element={<OrdersPage />} />
-					<Route path={paths.messages} element={<>messages</>} />
-				</Route>
-			</Route>
-			<Route path={paths.auth} element={<>Auth</>} />
-			<Route path={paths.register} element={<>reg</>} />
+		const renderElement = (
+			<Suspense fallback={<>loading...</>}>{element}</Suspense>
+		)
+
+		return (
 			<Route
-				path={paths.notFound}
+				key={path}
+				path={path}
 				element={
-					<>
-						not found, <Link to='/'>go home</Link>
-					</>
+					authOnly ? (
+						// <RequireAuth>{renderElement}</RequireAuth>
+						<>
+							<Layout>{renderElement}</Layout>
+						</>
+					) : noLayout ? (
+						renderElement
+					) : dashboardLayout ? (
+						<Layout>
+							<DashboardLayout>{renderElement}</DashboardLayout>
+						</Layout>
+					) : (
+						<Layout>{renderElement}</Layout>
+					)
 				}
 			/>
-		</>
-	)
-)
+		)
+	}, [])
 
-// return <RouterProvider router={router}></RouterProvider>
+	return <Routes>{Object.values(routeConfig).map(renderWithWrapper)}</Routes>
+}
+
+export default memo(AppRouter)

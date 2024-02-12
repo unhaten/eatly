@@ -1,5 +1,7 @@
+import Router from './providers/router/Router'
+
 const App = () => {
-	return <></>
+	return <Router />
 }
 
 export default App

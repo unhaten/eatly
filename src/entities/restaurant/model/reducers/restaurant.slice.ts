@@ -28,7 +28,7 @@ export const restaurantSlice = createSlice({
 				state.bookmarkedRestaurants.push(action.payload)
 			}
 
-			console.log(current(state.bookmarkedRestaurants))
+			// console.log(current(state.bookmarkedRestaurants))
 
 			// state.bookmarkedRestaurants.push(action.payload)
 		}
