@@ -1,7 +1,7 @@
 import { List, ListItem, Box } from '@mui/material'
-import Product from '../..'
-import { productAPI } from '../../model/services/product.service'
-import { IProduct } from '../../types/types'
+import Product from '../../entities/product'
+import { productAPI } from '../../entities/product/model/services/product.service'
+import { IProduct } from '../../entities/product/types/types'
 
 const PopularProductList = () => {
 	const { data } = productAPI.useFetchAllProductsQuery('')

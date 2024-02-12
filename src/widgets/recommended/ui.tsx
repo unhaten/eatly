@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import RecommendedProductList from '../../entities/product/components/recommendedProductList'
+import RecommendedProductList from '../recommendedProductList'
 
 const Recommended = () => {
 	return (

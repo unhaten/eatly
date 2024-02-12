@@ -1,3 +1,3 @@
 import PopularProductList from "./ui";
 
-export default PopularProductList;
+export default PopularProductList

@@ -2,7 +2,6 @@ import { Grid } from '@mui/material'
 import Wallet from '../../widgets/wallet'
 import Recommended from '../../widgets/recommended'
 import { FC, ReactNode } from 'react'
-import { Outlet } from 'react-router-dom'
 
 interface IDashboardLayout {
 	children: ReactNode
