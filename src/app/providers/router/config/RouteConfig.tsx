@@ -5,6 +5,7 @@ import {
 } from '../../../../shared/config/routes/paths'
 import HomePage from '../../../../pages/home'
 import OrdersPage from '../../../../pages/orders'
+import RestaurantsPage from '../../../../pages/restaurants'
 
 export const routeConfig: Record<AppRoutes, AppRoutesWithAuthProps> = {
 	[AppRoutes.HOME]: {
@@ -38,7 +39,8 @@ export const routeConfig: Record<AppRoutes, AppRoutesWithAuthProps> = {
 	},
 	[AppRoutes.RESTAURANTS]: {
 		path: paths.restaurants,
-		element: <>restaurants</>
+		element: <RestaurantsPage />,
+		dashboardLayout: true
 	},
 	[AppRoutes.RESTAURANT_DETAILS]: {
 		path: paths.restaurantDetails,

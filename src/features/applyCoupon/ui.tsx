@@ -4,6 +4,8 @@ import ConfirmationNumberRoundedIcon from '@mui/icons-material/ConfirmationNumbe
 import s from './style.module.scss'
 
 const ApplyCoupon = () => {
+	const handleClick = () => {}
+
 	return (
 		<>
 			<Box
@@ -30,7 +32,11 @@ const ApplyCoupon = () => {
 						height: 1
 					}}
 				/>
-				<AltButton text={'Apply'} className={s.button} />
+				<AltButton
+					text={'Apply'}
+					className={s.button}
+					onClick={handleClick}
+				/>
 			</Box>
 		</>
 	)

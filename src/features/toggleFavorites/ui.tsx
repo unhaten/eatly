@@ -30,7 +30,7 @@ const ToggleFavorites: FC<IToggleFavorites> = ({ item, product }) => {
 				className={product ? s.absolute : ''}
 				sx={{
 					':hover': {
-						backgroundColor: isIncluded && 'accent.dark'
+						backgroundColor: isIncluded ? 'accent.light' : ''
 					}
 				}}
 				color={isIncluded ? 'accent' : ''}

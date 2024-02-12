@@ -1,4 +1,8 @@
-import { PayloadAction, createSlice, current } from '@reduxjs/toolkit'
+import {
+	PayloadAction,
+	createSlice
+	// current
+} from '@reduxjs/toolkit'
 import { IRestaurant } from '../../types/types'
 
 interface RestaurantState {

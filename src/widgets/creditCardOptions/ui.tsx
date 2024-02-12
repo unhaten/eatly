@@ -6,20 +6,18 @@ import More from '../../features/more'
 
 const CreditCardOptions = () => {
 	return (
-		<>
-			<Box
-				display='flex'
-				justifyContent={'center'}
-				alignItems='center'
-				gap={3}
-				mt={6}
-			>
-				<Send />
-				<Receive />
-				<Invoicing />
-				<More />
-			</Box>
-		</>
+		<Box
+			display='flex'
+			justifyContent={'center'}
+			alignItems='center'
+			gap={3}
+			mt={6}
+		>
+			<Send />
+			<Receive />
+			<Invoicing />
+			<More />
+		</Box>
 	)
 }
 

@@ -4,14 +4,14 @@ import { FC } from 'react'
 interface IAltButton {
 	text: string
 	className?: string
+	onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-const AltButton: FC<IAltButton> = ({ text, className = '' }) => {
+const AltButton: FC<IAltButton> = ({ text, className = '', onClick }) => {
 	return (
 		<Box
 			component={Button}
 			variant='contained'
-			borderRadius={3.5}
 			padding={2}
 			sx={{
 				backgroundColor: 'accent.main',
@@ -20,6 +20,7 @@ const AltButton: FC<IAltButton> = ({ text, className = '' }) => {
 				}
 			}}
 			className={className}
+			onClick={onClick}
 		>
 			<span>{text}</span>
 		</Box>

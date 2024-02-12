@@ -14,14 +14,9 @@ const Wallet = () => {
 					height: 500
 				}}
 			>
-				<Box
-					component={Typography}
-					fontWeight={600}
-					color='test'
-					variant='h5'
-				>
+				<Typography fontWeight={600} variant='h5'>
 					Wallet
-				</Box>
+				</Typography>
 				<Box marginTop={3}>
 					<CreditCard />
 					<CreditCardOptions />

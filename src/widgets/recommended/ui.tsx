@@ -1,21 +1,26 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography } from '@mui/material'
+import RecommendedProductList from '../../entities/product/components/recommendedProductList'
 
 const Recommended = () => {
-    return (
-        <section>
-            <Box
-                paddingX={3}
-                paddingY={4}
-                sx={{
-                    borderRadius: 4,
-                    border: "1px solid#edf2f7",
-                    height: 500,
-                }}
-            >
-                <Typography>Recommended</Typography>
-            </Box>
-        </section>
-    );
-};
+	return (
+		<section>
+			<Box
+				mt={4}
+				paddingX={3}
+				paddingY={4}
+				sx={{
+					borderRadius: 4,
+					border: '1px solid#edf2f7',
+					height: 500
+				}}
+			>
+				<Typography fontWeight={600} variant='h5'>
+					Recommended
+				</Typography>
+				<RecommendedProductList />
+			</Box>
+		</section>
+	)
+}
 
-export default Recommended;
+export default Recommended
