@@ -33,21 +33,17 @@ const Header: FunctionComponent<HeaderProps> = ({ handleDrawerToggle }) => {
 				<Box display='flex' alignItems='center'>
 					<Typography variant='navHeader'>Dashboard</Typography>
 				</Box>
-				<Box
-					display='flex'
-					alignItems='center'
-					gap={{ xs: 1, sm: 2, md: 3 }}
-				>
+				<Box display='flex' alignItems='center' gap={{ xs: 1, sm: 2 }}>
 					{/* //!  TODO: probably this is going to be at shared */}
-					<p>
+					<IconButton size='large'>
 						<SearchRoundedIcon />
-					</p>
-					<p>
+					</IconButton>
+					<IconButton size='large'>
 						<NotificationsRoundedIcon />
-					</p>
-					<p>
+					</IconButton>
+					<IconButton size='large'>
 						<AccountCircleRoundedIcon />
-					</p>
+					</IconButton>
 					<IconButton
 						color='inherit'
 						aria-label='open drawer'

@@ -30,6 +30,8 @@ const ToggleBookmarks: FC<IToggleBookmarks> = ({ restaurant, item }) => {
 				onClick={() => handleClick(item)}
 				size={'large'}
 				sx={{
+					// position: 'relative',
+					// zIndex: 2,
 					':hover': {
 						backgroundColor: isIncluded ? 'accent.light' : ''
 					}

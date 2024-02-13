@@ -50,7 +50,7 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
 				width='fit-content'
 			>
 				<img src='/img/logo.svg' alt='' />
-				<Typography variant='logoText'>eatly</Typography>
+				<Typography variant='logoText'>feedme</Typography>
 			</Box>
 			<Box component={Divider} marginTop={2} />
 			<Box
