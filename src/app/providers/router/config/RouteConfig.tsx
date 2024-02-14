@@ -6,6 +6,7 @@ import {
 import HomePage from '../../../../pages/home'
 import OrdersPage from '../../../../pages/orders'
 import RestaurantsPage from '../../../../pages/restaurants'
+import ProductsPage from '../../../../pages/products'
 
 export const routeConfig: Record<AppRoutes, AppRoutesWithAuthProps> = {
 	[AppRoutes.HOME]: {
@@ -31,7 +32,8 @@ export const routeConfig: Record<AppRoutes, AppRoutesWithAuthProps> = {
 	},
 	[AppRoutes.PRODUCTS]: {
 		path: paths.products,
-		element: <>products</>
+		element: <ProductsPage />,
+		dashboardLayout: true
 	},
 	[AppRoutes.PRODUCT_DETAILS]: {
 		path: paths.productDetails,

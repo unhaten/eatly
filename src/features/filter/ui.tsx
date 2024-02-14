@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom'
 
 const Filter = () => {
 	const [searchParams, setSearchParams] = useSearchParams()
-
+	// ! TODO: remove filter if it is clicked twice
 	const handleClick = (value: string) => {
 		const filterKey = searchParams.get('filter')
 		if (filterKey !== value) {

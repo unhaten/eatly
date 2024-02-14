@@ -39,19 +39,23 @@ export const productSlice = createSlice({
 			const product = state.products.find(
 				item => item.id === action.payload
 			)
-			if (product?.quantity === 1) {
-				product.quantity = 1
-				// state.amount = 1
-			} else {
-				product.quantity--
-				state.amount--
+			if (product) {
+				if (product.quantity === 1) {
+					product.quantity = 1
+					// state.amount = 1
+				} else {
+					product.quantity--
+					state.amount--
+				}
 			}
 		},
 		removeFromCart(state, action: PayloadAction<IProduct>) {
 			const isMultiple = state.products.find(
 				product => product.id === action.payload.id
 			)
-			state.amount = state.amount - isMultiple?.quantity
+			if (isMultiple) {
+				state.amount = state.amount - isMultiple.quantity
+			}
 			state.products = state.products.filter(
 				product => product.id !== action.payload.id
 			)

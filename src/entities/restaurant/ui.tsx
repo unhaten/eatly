@@ -32,13 +32,14 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 			<Box
 				component={Card}
 				width={'100%'}
+				height={1}
 				borderRadius={3}
 				sx={{
 					'& img': {
 						display: 'block',
 						margin: '0 auto',
 						width: '100%',
-						maxHeight: '200px',
+						maxHeight: '150px',
 						borderTopLeftRadius: 12,
 						borderTopRightRadius: 12
 					}

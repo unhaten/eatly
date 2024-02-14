@@ -1,6 +1,6 @@
 import { Typography, Box, Button } from '@mui/material'
 import { Link } from 'react-router-dom'
-import PopularProductList from '../../../../widgets/popularProductList'
+import ProductList from '../../../../widgets/productList'
 
 const Popular = () => {
 	return (
@@ -21,7 +21,7 @@ const Popular = () => {
 					</Box>
 				</Link>
 			</Box>
-			<PopularProductList />
+			<ProductList popular />
 		</section>
 	)
 }

@@ -70,7 +70,7 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 						</Box>
 					</Box>
 					<CardActions sx={{ p: 0 }}>
-						{popular && <ToggleFavorites item={product} product />}
+						<ToggleFavorites item={product} product />
 					</CardActions>
 				</CardActionArea>
 			</Box>
