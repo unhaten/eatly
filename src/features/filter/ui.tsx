@@ -5,11 +5,16 @@ import { useSearchParams } from 'react-router-dom'
 const Filter = () => {
 	const [searchParams, setSearchParams] = useSearchParams()
 
-	const handleClick = (value) => {
-		setSearchParams(prev => {
-			prev.set('filter', value)
-			return prev
-		})
+	const handleClick = (value: string) => {
+		const filterKey = searchParams.get('filter')
+		if (filterKey !== value) {
+			setSearchParams(prev => {
+				prev.set('filter', value)
+				return prev
+			})
+		} else {
+			// searchParams.delete('filter')
+		}
 	}
 
 	return (

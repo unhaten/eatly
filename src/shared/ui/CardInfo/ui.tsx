@@ -6,7 +6,7 @@ import StarRateRoundedIcon from '@mui/icons-material/StarRateRounded'
 
 const CardInfo: FC<InfoProps> = ({ item }) => {
 	return (
-		<>
+		<Box>
 			<Box className={s.badge}>
 				<Typography
 					variant='caption'
@@ -59,7 +59,7 @@ const CardInfo: FC<InfoProps> = ({ item }) => {
 					</Typography>
 				</Box>
 			</Box>
-		</>
+		</Box>
 	)
 }
 

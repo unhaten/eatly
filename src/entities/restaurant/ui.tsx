@@ -2,6 +2,7 @@ import {
 	Box,
 	Card,
 	CardActionArea,
+	CardActions,
 	CardContent,
 	CardMedia
 } from '@mui/material'
@@ -13,7 +14,8 @@ import ToggleBookmarks from '../../features/toggleBookmarks'
 import { Link } from 'react-router-dom'
 
 const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
-	const handleClick = event => {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const handleClick = (event: any) => {
 		if (event.target.tagName.toLowerCase() === 'svg') {
 			event.preventDefault()
 		} else if (event.target.tagName.toLowerCase() === 'path') {
@@ -37,8 +39,8 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 						margin: '0 auto',
 						width: '100%',
 						maxHeight: '200px',
-						borderTopLeftRadius: 20,
-						borderTopRightRadius: 20
+						borderTopLeftRadius: 12,
+						borderTopRightRadius: 12
 					}
 				}}
 			>
@@ -60,12 +62,12 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 							paddingY: '12px !important'
 						}}
 					>
-						<Box>
-							<CardInfo item={restaurant} />
-						</Box>
-						{nearby && (
-							<ToggleBookmarks item={restaurant} restaurant />
-						)}
+						<CardInfo item={restaurant} />
+						<CardActions>
+							{nearby && (
+								<ToggleBookmarks item={restaurant} restaurant />
+							)}
+						</CardActions>
 					</Box>
 				</CardActionArea>
 			</Box>
