@@ -12,6 +12,15 @@ interface IOrderListProduct {
 }
 
 const OrderListProduct: FC<IOrderListProduct> = ({ product }) => {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const handleClick = (event: any) => {
+		if (event.target.tagName.toLowerCase() === 'svg') {
+			event.preventDefault()
+		} else if (event.target.tagName.toLowerCase() === 'path') {
+			event.preventDefault()
+		}
+	}
+
 	return (
 		<ListItem
 			className={s.item}
@@ -19,7 +28,7 @@ const OrderListProduct: FC<IOrderListProduct> = ({ product }) => {
 				position: 'relative'
 			}}
 		>
-			{/* <Link to={`/products/${product.id}`}> */}
+			<Link to={`/products/${product.id}`} onClick={handleClick} className={s.linkContainer}>
 				<Box
 					display='flex'
 					justifyContent={{ xs: 'start', sm: 'space-between' }}
@@ -50,7 +59,7 @@ const OrderListProduct: FC<IOrderListProduct> = ({ product }) => {
 					</Box>
 					<RemoveFromCart product={product} />
 				</Box>
-			{/* </Link> */}
+			</Link>
 		</ListItem>
 	)
 }

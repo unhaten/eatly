@@ -21,7 +21,7 @@ const GoBack = () => {
 					borderRadius: 4
 				}}
 			>
-				<ArrowBackIosNewRoundedIcon />
+				<ArrowBackIosNewRoundedIcon fontSize='small' />
 			</IconButton>
 		</>
 	)
