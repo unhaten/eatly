@@ -103,7 +103,7 @@ let theme = createTheme({
 		accent: {
 			main: themeConfig.palette.accent.main,
 			dark: themeConfig.palette.accent.dark,
-			light: '#6c5fbc6e',
+			light: themeConfig.palette.accent.light,
 			contrastText: themeConfig.palette.secondary
 		},
 		error: {

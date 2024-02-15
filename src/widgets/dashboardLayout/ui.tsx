@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
-import Wallet from '../../widgets/wallet'
-import Recommended from '../../widgets/recommended'
+import Wallet from '../Wallet'
+import Recommended from '../Recommended'
 import { FC, ReactNode } from 'react'
 
 interface IDashboardLayout {

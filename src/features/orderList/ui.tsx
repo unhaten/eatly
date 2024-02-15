@@ -1,7 +1,7 @@
 import { List } from '@mui/material'
 import { IProduct } from '../../entities/product/types/types'
 import { FC } from 'react'
-import OrderListProduct from '../orderListProduct'
+import OrderListProduct from '../OrderListProduct'
 import s from './style.module.scss'
 
 interface IOrderList {

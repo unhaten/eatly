@@ -1,12 +1,12 @@
 import { Button, Typography, Box } from '@mui/material'
 import { useAppSelector } from '../../shared/lib/hooks/redux'
-import OrderList from '../../features/orderList'
-import ApplyCoupon from '../../features/applyCoupon'
-import OrderCount from '../../features/orderCount'
-import PlaceOrder from '../../features/placeOrder'
+import OrderList from '../../features/OrderList'
+import ApplyCoupon from '../../features/ApplyCoupon'
+import OrderCount from '../../features/OrderCount'
+import PlaceOrder from '../../features/PlaceOrder'
 import { Link } from 'react-router-dom'
 import s from './style.module.scss'
-import GoBack from '../../features/goBack'
+import GoBack from '../../features/GoBack'
 
 const OrdersPage = () => {
 	const { products } = useAppSelector(state => state.productReducer)

@@ -6,7 +6,8 @@ const themeConfig = {
 		error: '#F1534E',
 		accent: {
 			main: '#6C5FBC',
-			dark: '#5d52a3'
+			dark: '#5d52a3',
+			light: '#6c5fbc6e'
 		}
 	},
 	filter: {

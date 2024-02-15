@@ -4,9 +4,10 @@ import {
 	paths
 } from '../../../../shared/config/routes/paths'
 import HomePage from '../../../../pages/home'
-import OrdersPage from '../../../../pages/orders'
-import RestaurantsPage from '../../../../pages/restaurants'
-import ProductsPage from '../../../../pages/products'
+import OrdersPage from '../../../../pages/Orders'
+import RestaurantsPage from '../../../../pages/Restaurants'
+import ProductsPage from '../../../../pages/Products'
+import ProductDetailsPage from '../../../../pages/ProductDetails'
 
 export const routeConfig: Record<AppRoutes, AppRoutesWithAuthProps> = {
 	[AppRoutes.HOME]: {
@@ -37,7 +38,8 @@ export const routeConfig: Record<AppRoutes, AppRoutesWithAuthProps> = {
 	},
 	[AppRoutes.PRODUCT_DETAILS]: {
 		path: paths.productDetails,
-		element: <>product details</>
+		element: <ProductDetailsPage />,
+		dashboardLayout: true
 	},
 	[AppRoutes.RESTAURANTS]: {
 		path: paths.restaurants,

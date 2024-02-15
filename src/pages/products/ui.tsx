@@ -1,4 +1,4 @@
-import ProductList from '../../widgets/productList'
+import ProductList from '../../widgets/ProductList'
 
 const ProductsPage = () => {
 	return (

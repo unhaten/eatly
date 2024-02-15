@@ -3,7 +3,7 @@ import { IProduct } from '../../entities/product/types/types'
 import { Box, IconButton, Typography } from '@mui/material'
 import { productSlice } from '../../entities/product/model/reducers/product.slice'
 import { useAppDispatch } from '../../shared/lib/hooks/redux'
-import FormattedPrice from '../formattedPrice'
+import FormattedPrice from '../FormattedPrice'
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
 import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded'
 

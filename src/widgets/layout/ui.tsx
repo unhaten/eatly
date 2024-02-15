@@ -1,8 +1,8 @@
 import { FunctionComponent, ReactNode, useState } from 'react'
-import Header from '../header'
-import Footer from '../footer'
+import Header from '../Header'
+import Footer from '../Footer'
 import { Box, CssBaseline } from '@mui/material'
-import Sidebar from '../sidebar'
+import Sidebar from '../Sidebar'
 import Container from '../../shared/ui/Container'
 import s from './styles.module.scss'
 

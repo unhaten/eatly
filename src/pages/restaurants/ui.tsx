@@ -1,4 +1,4 @@
-import RestaurantList from '../../widgets/restaurantList'
+import RestaurantList from '../../widgets/RestaurantList'
 
 const RestaurantsPage = () => {
 	return (

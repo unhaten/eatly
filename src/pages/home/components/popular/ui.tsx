@@ -1,6 +1,6 @@
 import { Typography, Box, Button } from '@mui/material'
 import { Link } from 'react-router-dom'
-import ProductList from '../../../../widgets/productList'
+import ProductList from '../../../../widgets/ProductList'
 
 const Popular = () => {
 	return (

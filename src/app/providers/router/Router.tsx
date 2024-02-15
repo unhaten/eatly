@@ -2,8 +2,8 @@ import { Suspense, FC, memo, useCallback } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { AppRoutesWithAuthProps } from '../../../shared/config/routes/paths'
 import { routeConfig } from './config/RouteConfig'
-import Layout from '../../../widgets/layout'
-import DashboardLayout from '../../../widgets/dashboardLayout'
+import Layout from '../../../widgets/Layout'
+import DashboardLayout from '../../../widgets/DashboardLayout'
 
 const AppRouter: FC = () => {
 	const renderWithWrapper = useCallback((route: AppRoutesWithAuthProps) => {

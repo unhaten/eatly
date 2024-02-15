@@ -10,7 +10,7 @@ import s from './style.module.scss'
 import { FC } from 'react'
 import { RestaurantProps } from './types/types'
 import CardInfo from '../../shared/ui/CardInfo'
-import ToggleBookmarks from '../../features/toggleBookmarks'
+import ToggleBookmarks from '../../features/ToggleBookmarks'
 import { Link } from 'react-router-dom'
 
 const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {

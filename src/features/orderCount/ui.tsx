@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import s from './style.module.scss'
 import { useAppSelector } from '../../shared/lib/hooks/redux'
-import FormattedPrice from '../formattedPrice'
+import FormattedPrice from '../FormattedPrice'
 
 const OrderCount = () => {
 	const { products } = useAppSelector(state => state.productReducer)

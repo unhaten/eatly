@@ -1,8 +1,8 @@
 import { Box } from '@mui/material'
-import Invoicing from '../../features/invoicing'
-import Receive from '../../features/receive'
-import Send from '../../features/send'
-import More from '../../features/more'
+import Invoicing from '../../features/Invoicing'
+import Receive from '../../features/Receive'
+import Send from '../../features/Send'
+import More from '../../features/More'
 
 const CreditCardOptions = () => {
 	return (

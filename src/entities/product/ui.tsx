@@ -8,9 +8,9 @@ import {
 import { ProductProps } from './types/types'
 import { FC } from 'react'
 import CardInfo from '../../shared/ui/CardInfo'
-import ToggleFavorites from '../../features/toggleFavorites'
-import AddToCart from '../../features/addToCart'
-import FormattedPrice from '../../features/formattedPrice'
+import ToggleFavorites from '../../features/ToggleFavorites'
+import AddToCart from '../../features/AddToCart'
+import FormattedPrice from '../../features/FormattedPrice'
 import { Link } from 'react-router-dom'
 import s from './style.module.scss'
 
@@ -47,16 +47,16 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 				}}
 			>
 				<CardActionArea component='div' sx={{ py: 2, height: '100%' }}>
-					<CardMedia
-						component='img'
-						image={popular ? product.image : ''}
-						title={product.name}
-					/>
+					<Box height={110}>
+						<CardMedia
+							component='img'
+							image={popular ? product.image : ''}
+							title={product.name}
+						/>
+					</Box>
 					<Box
 						sx={{
-							paddingX: 3,
-							paddingY: 1,
-							pb: 0
+							paddingX: 3
 						}}
 					>
 						<CardInfo item={product} />

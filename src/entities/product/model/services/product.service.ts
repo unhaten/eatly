@@ -11,6 +11,12 @@ export const productAPI = createApi({
 				url: '/product'
 			}),
 			providesTags: ['Product']
+		}),
+		fetchProductById: build.query<IProduct, string>({
+			query: id => ({
+				url: `/product/${id}`
+			}),
+			providesTags: ['Product']
 		})
 	})
 })

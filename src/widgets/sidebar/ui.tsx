@@ -17,7 +17,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { drawerWidth } from '../../shared/consts/drawerWidth'
 import { UpperLinks } from '../../shared/consts/links/UpperLinks'
 import { LowerLinks } from '../../shared/consts/links/LowerLinks'
-import SidebarEventCount from '../../features/sidebarEventCount'
+import SidebarEventCount from '../../features/SidebarEventCount'
 
 interface SidebarProps {
 	mobileOpen: boolean
