@@ -1,10 +1,10 @@
-import { Box, Typography } from '@mui/material'
 import CardOption from '../../shared/ui/CardOption'
+import CardSendIcon from '../../shared/ui/icons/CardSendIcon'
 
 const Send = () => {
 	return (
 		<>
-			<CardOption text={'Send'} />
+			<CardOption text={'Send'} icon={<CardSendIcon />} />
 		</>
 	)
 }

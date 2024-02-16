@@ -27,7 +27,13 @@ const OrderListProduct: FC<IOrderListProduct> = ({ product }) => {
 		<ListItem
 			className={s.item}
 			sx={{
-				position: 'relative'
+				position: 'relative',
+
+				transition: 'background .2s ease-in-out',
+
+				'&:hover': {
+					background: '#f7f7f7'
+				}
 			}}
 		>
 			<Link

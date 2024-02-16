@@ -1,8 +1,8 @@
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded'
-import ReceiptRoundedIcon from '@mui/icons-material/ReceiptRounded'
 import ChatRoundedIcon from '@mui/icons-material/ChatRounded'
 import WalletRoundedIcon from '@mui/icons-material/WalletRounded'
 import MoveDownRoundedIcon from '@mui/icons-material/MoveDownRounded'
+import LocalAtmRoundedIcon from '@mui/icons-material/LocalAtmRounded';
 
 export const UpperLinks = [
 	{
@@ -13,7 +13,7 @@ export const UpperLinks = [
 	{
 		name: 'Orders',
 		path: '/orders',
-		icon: <ReceiptRoundedIcon />
+		icon: <LocalAtmRoundedIcon />
 	},
 	{
 		name: 'Messages',

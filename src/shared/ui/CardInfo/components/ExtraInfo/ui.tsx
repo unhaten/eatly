@@ -26,7 +26,7 @@ const ExtraInfo: FC<ExtraInfoProps> = ({ deliveryTime, rate, inCard }) => {
 				gap={inCard ? 0 : 0.5}
 			>
 				<StarRateRoundedIcon
-					fontSize='small'
+					fontSize={inCard ? 'small' : 'medium'}
 					className={s.star}
 					sx={{
 						color: 'accent.main',
