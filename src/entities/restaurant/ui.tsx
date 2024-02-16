@@ -20,6 +20,8 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 			event.preventDefault()
 		} else if (event.target.tagName.toLowerCase() === 'path') {
 			event.preventDefault()
+		} else if (event.target.tagName.toLowerCase() === 'button') {
+			event.preventDefault()
 		}
 	}
 
@@ -39,13 +41,21 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 						display: 'block',
 						margin: '0 auto',
 						width: '100%',
-						maxHeight: '150px',
+						maxHeight: '200px',
 						borderTopLeftRadius: 12,
 						borderTopRightRadius: 12
 					}
 				}}
 			>
-				<CardActionArea component='div'>
+				<CardActionArea
+					component='div'
+					sx={{
+						height: 1
+						// 	 '&:active': {
+						// 	backgroundColor: 'transparent'
+						// }
+					}}
+				>
 					<CardMedia
 						component='img'
 						image={nearby ? restaurant.image : ''}

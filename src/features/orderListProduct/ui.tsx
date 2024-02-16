@@ -18,6 +18,8 @@ const OrderListProduct: FC<IOrderListProduct> = ({ product }) => {
 			event.preventDefault()
 		} else if (event.target.tagName.toLowerCase() === 'path') {
 			event.preventDefault()
+		} else if (event.target.tagName.toLowerCase() === 'button') {
+			event.preventDefault()
 		}
 	}
 
@@ -28,7 +30,11 @@ const OrderListProduct: FC<IOrderListProduct> = ({ product }) => {
 				position: 'relative'
 			}}
 		>
-			<Link to={`/products/${product.id}`} onClick={handleClick} className={s.linkContainer}>
+			<Link
+				to={`/products/${product.id}`}
+				onClick={handleClick}
+				className={s.linkContainer}
+			>
 				<Box
 					display='flex'
 					justifyContent={{ xs: 'start', sm: 'space-between' }}

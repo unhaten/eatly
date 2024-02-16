@@ -21,6 +21,8 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 			event.preventDefault()
 		} else if (event.target.tagName.toLowerCase() === 'path') {
 			event.preventDefault()
+		} else if (event.target.tagName.toLowerCase() === 'button') {
+			event.preventDefault()
 		}
 	}
 
