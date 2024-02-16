@@ -36,7 +36,14 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 				width={'100%'}
 				height={1}
 				borderRadius={3}
+				className={s.cardContainer}
 				sx={{
+					transition: 'background .2s ease-in-out',
+
+					'&:hover': {
+						background: '#f7f7f7'
+					},
+
 					'& img': {
 						display: 'block',
 						margin: '0 auto',
@@ -47,40 +54,30 @@ const Restaurant: FC<RestaurantProps> = ({ nearby, restaurant }) => {
 					}
 				}}
 			>
-				<CardActionArea
-					component='div'
+				<CardMedia
+					component='img'
+					image={nearby ? restaurant.image : ''}
+					title={restaurant.name}
+					// loading='lazy'
+				/>
+				<Box
+					component={CardContent}
+					className={s.content}
+					display='flex'
+					justifyContent='space-between'
+					alignItems={'end'}
 					sx={{
-						height: 1
-						// 	 '&:active': {
-						// 	backgroundColor: 'transparent'
-						// }
+						paddingX: 3,
+						paddingY: '12px !important'
 					}}
 				>
-					<CardMedia
-						component='img'
-						image={nearby ? restaurant.image : ''}
-						title={restaurant.name}
-						// loading='lazy'
-					/>
-					<Box
-						component={CardContent}
-						className={s.content}
-						display='flex'
-						justifyContent='space-between'
-						alignItems={'end'}
-						sx={{
-							paddingX: 3,
-							paddingY: '12px !important'
-						}}
-					>
-						<CardInfo item={restaurant} />
-						<CardActions>
-							{nearby && (
-								<ToggleBookmarks item={restaurant} restaurant />
-							)}
-						</CardActions>
-					</Box>
-				</CardActionArea>
+					<CardInfo item={restaurant} />
+					<CardActions>
+						{nearby && (
+							<ToggleBookmarks item={restaurant} restaurant />
+						)}
+					</CardActions>
+				</Box>
 			</Box>
 		</Link>
 	)

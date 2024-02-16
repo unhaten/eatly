@@ -38,7 +38,14 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 				height={1}
 				minWidth={'145px'}
 				borderRadius={3}
+				py={2}
 				sx={{
+					transition: 'background .2s ease-in-out',
+
+					'&:hover': {
+						background: '#f7f7f7'
+					},
+
 					'& img': {
 						display: 'block',
 						margin: '0 auto',
@@ -48,33 +55,31 @@ const Product: FC<ProductProps> = ({ popular, product }) => {
 					}
 				}}
 			>
-				<CardActionArea component='div' sx={{ py: 2, height: '100%' }}>
-					<Box height={110}>
-						<CardMedia
-							component='img'
-							image={popular ? product.image : ''}
-							title={product.name}
-						/>
-					</Box>
+				<Box height={110}>
+					<CardMedia
+						component='img'
+						image={popular ? product.image : ''}
+						title={product.name}
+					/>
+				</Box>
+				<Box
+					sx={{
+						paddingX: 3
+					}}
+				>
+					<CardInfo item={product} />
 					<Box
-						sx={{
-							paddingX: 3
-						}}
+						display={'flex'}
+						alignItems='center'
+						justifyContent={'space-between'}
 					>
-						<CardInfo item={product} />
-						<Box
-							display={'flex'}
-							alignItems='center'
-							justifyContent={'space-between'}
-						>
-							<FormattedPrice price={product.price} inCard />
-							<AddToCart product={product} />
-						</Box>
+						<FormattedPrice price={product.price} inCard />
+						<AddToCart product={product} />
 					</Box>
-					<CardActions sx={{ p: 0 }}>
-						<ToggleFavorites item={product} product />
-					</CardActions>
-				</CardActionArea>
+				</Box>
+				<CardActions sx={{ p: 0 }}>
+					<ToggleFavorites item={product} product />
+				</CardActions>
 			</Box>
 		</Link>
 	)
