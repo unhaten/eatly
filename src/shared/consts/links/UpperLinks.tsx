@@ -1,29 +1,29 @@
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded'
-import ChatRoundedIcon from '@mui/icons-material/ChatRounded'
-import WalletRoundedIcon from '@mui/icons-material/WalletRounded'
 import MoveDownRoundedIcon from '@mui/icons-material/MoveDownRounded'
-import LocalAtmRoundedIcon from '@mui/icons-material/LocalAtmRounded';
+import HomeIcon from '../../ui/icons/HomeIcon/ui'
+import OrdersIcon from '../../ui/icons/OrdersIcon'
+import MessagesIcon from '../../ui/icons/MessagesIcon'
+import WalletsIcon from '../../ui/icons/WalletsIcon/ui'
 
 export const UpperLinks = [
 	{
 		name: 'Dashboard',
 		path: '/',
-		icon: <HomeRoundedIcon />
+		icon: <HomeIcon />
 	},
 	{
 		name: 'Orders',
 		path: '/orders',
-		icon: <LocalAtmRoundedIcon />
+		icon: <OrdersIcon />
 	},
 	{
 		name: 'Messages',
 		path: '/messages',
-		icon: <ChatRoundedIcon />
+		icon: <MessagesIcon />
 	},
 	{
 		name: 'My Wallets',
 		path: '/wallets',
-		icon: <WalletRoundedIcon />
+		icon: <WalletsIcon />
 	},
 	{
 		name: 'Activity',

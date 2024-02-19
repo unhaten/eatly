@@ -69,7 +69,10 @@ const Sidebar: FunctionComponent<SidebarProps> = ({
 											height: '45px'
 										}}
 									>
-										<ListItemIcon>{item.icon}</ListItemIcon>
+										<ListItemIcon
+										>
+											{item.icon}
+										</ListItemIcon>
 										{/* <ListItemText primary={text} /> */}
 										<Typography variant='navLinks'>
 											{item.name}

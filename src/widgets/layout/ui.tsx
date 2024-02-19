@@ -19,7 +19,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
 
 	return (
 		<div className={s.container}>
-			<CssBaseline />
+			{/* <CssBaseline /> */}
 			<Header handleDrawerToggle={handleDrawerToggle} />
 			<Box component='main' display='flex'>
 				<Sidebar

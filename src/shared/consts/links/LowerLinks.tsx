@@ -1,15 +1,15 @@
-import HelpRoundedIcon from '@mui/icons-material/HelpRounded'
-import TuneRoundedIcon from '@mui/icons-material/TuneRounded'
+import HelpIcon from '../../ui/icons/HelpIcon'
+import SettingsIcon from '../../ui/icons/SettingsIcon'
 
 export const LowerLinks = [
 	{
 		name: 'Get Help',
 		path: '/help',
-		icon: <HelpRoundedIcon />
+		icon: <HelpIcon />
 	},
 	{
 		name: 'Settings',
 		path: '/settings',
-		icon: <TuneRoundedIcon />
+		icon: <SettingsIcon />
 	}
 ]

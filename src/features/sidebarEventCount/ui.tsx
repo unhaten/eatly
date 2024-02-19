@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { FC } from 'react'
 import { useAppSelector } from '../../shared/lib/hooks/redux'
 import s from './style.module.scss'
@@ -18,7 +18,7 @@ const SidebarEventCount: FC<ISidebarEventCount> = ({ event }) => {
 						sx={{ backgroundColor: 'accent.main' }}
 						className={s.orders}
 					>
-						{amount}
+						<Typography variant='caption'>{amount}</Typography>
 					</Box>
 				)}
 			</Box>
