@@ -10,7 +10,7 @@
 			"deliveryTime": 24,
 			"rate": 4.8,
 			"weight": 367,
-			"image": "/img/food1.png",
+			"image": "/img/food1.webp",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -24,7 +24,7 @@
 			"deliveryTime": 32,
 			"rate": 4.2,
 			"weight": 367,
-			"image": "/img/food2.png",
+			"image": "/img/food2.webp",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -38,7 +38,7 @@
 			"deliveryTime": 12,
 			"rate": 4.9,
 			"weight": 367,
-			"image": "/img/food3.png",
+			"image": "/img/food3.webp",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -52,7 +52,7 @@
 			"deliveryTime": 12,
 			"rate": 4.9,
 			"weight": 367,
-			"image": "/img/foodPopular.png",
+			"image": "/img/foodPopular.webp",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -66,7 +66,7 @@
 			"deliveryTime": 12,
 			"rate": 4.9,
 			"weight": 367,
-			"image": "/img/food4.png",
+			"image": "/img/food4.webp",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -80,7 +80,7 @@
 			"deliveryTime": 12,
 			"rate": 4.9,
 			"weight": 367,
-			"image": "/img/food5.png",
+			"image": "/img/food5.webp",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -94,7 +94,7 @@
 			"deliveryTime": 12,
 			"rate": 4.9,
 			"weight": 367,
-			"image": "/img/food6.png",
+			"image": "/img/food6.webp",
 			"imageThin": "",
 			"visits": 0
 		}
@@ -108,7 +108,7 @@
 			"type": "healthy",
 			"deliveryTime": 24,
 			"rate": 4.8,
-			"image": "/img/restaurant1.jpg",
+			"image": "/img/restaurant1.webp",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -120,7 +120,7 @@
 			"type": "trending",
 			"deliveryTime": 32,
 			"rate": 4.2,
-			"image": "/img/restaurant2.jpg",
+			"image": "/img/restaurant2.webp",
 			"imageThin": "",
 			"visits": 0
 		},
@@ -132,7 +132,7 @@
 			"type": "supreme",
 			"deliveryTime": 12,
 			"rate": 4.9,
-			"image": "/img/restaurant3.jpg",
+			"image": "/img/restaurant3.webp",
 			"imageThin": "",
 			"visits": 0
 		},

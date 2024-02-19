@@ -2,7 +2,7 @@ import { List, ListItem, Box } from '@mui/material'
 import Restaurant from '../../entities/restaurant'
 import { restaurantAPI } from '../../entities/restaurant/model/services/restaurant.service'
 import { IRestaurant } from '../../entities/restaurant/types/types'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { useAppSelector } from '../../shared/lib/hooks/redux'
 
 interface RestaurantListProps {
@@ -12,9 +12,12 @@ interface RestaurantListProps {
 const RestaurantList: FC<RestaurantListProps> = ({ nearby }) => {
 	const { data, isLoading, isSuccess, error } =
 		restaurantAPI.useFetchAllRestaurantsQuery('')
+
 	const { bookmarkedRestaurants } = useAppSelector(
 		state => state.restaurantReducer
 	)
+
+	useEffect(() => {}, [])
 
 	//! filtering items by bookmarks
 

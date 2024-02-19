@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material'
 import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded'
 import { number } from 'card-validator'
 
-const CreditCard = ({ cardNumber = '57385967723875' }) => {
+const CreditCard = ({ cardNumber = '5425233430109903' }) => {
 	console.log(number(cardNumber))
 
 	return (
