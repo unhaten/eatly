@@ -1,6 +1,6 @@
 import { Typography, Box, IconButton } from '@mui/material'
 import s from './Wallet.module.scss'
-import CreditCard from '../../entities/CreditCard'
+import CreditCard from '../CreditCard'
 import CreditCardOptions from '../CreditCardOptions'
 import WalletSettings from '../../features/WalletSettings'
 

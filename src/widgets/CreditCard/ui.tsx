@@ -2,11 +2,9 @@ import CardIcon from '../../shared/ui/icons/CardIcon'
 import s from './style.module.scss'
 import { Box, Typography } from '@mui/material'
 import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded'
-import { number } from 'card-validator'
+import ValidateCardNumber from '../../features/ValidateCardNumber'
 
-const CreditCard = ({ cardNumber = '5425233430109903' }) => {
-	console.log(number(cardNumber))
-
+const CreditCard = ({ cardNumber = 5425233430109903 }) => {
 	return (
 		<>
 			<Box className={s.card}>
@@ -25,10 +23,8 @@ const CreditCard = ({ cardNumber = '5425233430109903' }) => {
 						fontSize='large'
 					/>
 				</Box>
-				<Box className={s.bottom} sx={{ color: '#fff' }} p={2.5} pb={4}>
-					<Typography variant='body1' fontWeight={600}>
-						{cardNumber}
-					</Typography>
+				<Box className={s.bottom} sx={{ color: '#fff' }} p={3} pb={4}>
+					<ValidateCardNumber cardNumber={cardNumber} />
 					<Box mt={4}>
 						<Typography fontWeight={500} variant='caption'>
 							Card Holder
