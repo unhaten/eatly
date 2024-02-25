@@ -4,6 +4,7 @@ import { restaurantAPI } from '../../entities/restaurant/model/services/restaura
 import { IRestaurant } from '../../entities/restaurant/types/types'
 import { FC, useEffect } from 'react'
 import { useAppSelector } from '../../shared/lib/hooks/redux'
+import CardsLoader from '../../features/CardsLoader'
 
 interface RestaurantListProps {
 	nearby?: boolean
@@ -55,8 +56,12 @@ const RestaurantList: FC<RestaurantListProps> = ({ nearby }) => {
 			}}
 		>
 			{/* //! TODO: make service/slice that grabs 3 items from db and map it here */}
-			{isLoading && <h1>Loading...</h1>}
 			{error && <h1>Error has occurred</h1>}
+			{!isLoading && !isSuccess && <h1>No restaurants found</h1>}
+
+			{isLoading && (
+				<CardsLoader restaurants nearby={nearby ? true : false} />
+			)}
 
 			{nearby
 				? data?.slice(0, 3).map((restaurant: IRestaurant) => {

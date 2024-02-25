@@ -4,6 +4,7 @@ import { productAPI } from '../../entities/product/model/services/product.servic
 import { IProduct } from '../../entities/product/types/types'
 import { FC } from 'react'
 import { useAppSelector } from '../../shared/lib/hooks/redux'
+import CardsLoader from '../../features/CardsLoader'
 
 interface ProductListProps {
 	popular?: boolean
@@ -49,7 +50,9 @@ const ProductList: FC<ProductListProps> = ({ popular }) => {
 				}
 			}}
 		>
-			{isLoading && <h1>Loading...</h1>}
+			{isLoading && (
+				<CardsLoader products popular={popular ? true : false} />
+			)}
 			{error && <h1>Error has occurred</h1>}
 			{popular
 				? data?.map((product: IProduct) => {
