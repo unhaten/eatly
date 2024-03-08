@@ -1,7 +1,6 @@
 import {
 	Box,
 	Card,
-	CardActionArea,
 	CardActions,
 	CardContent,
 	CardMedia
